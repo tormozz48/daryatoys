@@ -1,0 +1,464 @@
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-11-15 20:07:57 +0200
+Served asset /rails.png - 200 OK (20ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2012-11-15 20:08:03 +0200
+Processing by Admin::DashboardController#index as HTML
+Completed 401 Unauthorized in 4ms
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2012-11-15 20:08:04 +0200
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+PG::Error: ERROR:  relation "admin_users" does not exist
+LINE 4:              WHERE a.attrelid = '"admin_users"'::regclass
+                                        ^
+:             SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+              FROM pg_attribute a LEFT JOIN pg_attrdef d
+                ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+             WHERE a.attrelid = '"admin_users"'::regclass
+               AND a.attnum > 0 AND NOT a.attisdropped
+             ORDER BY a.attnum
+
+Completed 500 Internal Server Error in 3ms
+
+ActiveRecord::StatementInvalid (PG::Error: ERROR:  relation "admin_users" does not exist
+LINE 4:              WHERE a.attrelid = '"admin_users"'::regclass
+                                        ^
+:             SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+              FROM pg_attribute a LEFT JOIN pg_attrdef d
+                ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+             WHERE a.attrelid = '"admin_users"'::regclass
+               AND a.attnum > 0 AND NOT a.attisdropped
+             ORDER BY a.attnum
+):
+  activerecord (3.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:1106:in `async_exec'
+  activerecord (3.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:1106:in `exec_no_cache'
+  activerecord (3.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:650:in `block in exec_query'
+  activerecord (3.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:280:in `block in log'
+  activesupport (3.2.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activerecord (3.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:275:in `log'
+  activerecord (3.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:649:in `exec_query'
+  activerecord (3.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:1231:in `column_definitions'
+  activerecord (3.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:845:in `columns'
+  activerecord (3.2.1) lib/active_record/connection_adapters/schema_cache.rb:12:in `block in initialize'
+  activerecord (3.2.1) lib/active_record/model_schema.rb:228:in `yield'
+  activerecord (3.2.1) lib/active_record/model_schema.rb:228:in `default'
+  activerecord (3.2.1) lib/active_record/model_schema.rb:228:in `columns'
+  activerecord (3.2.1) lib/active_record/model_schema.rb:243:in `column_defaults'
+  activerecord (3.2.1) lib/active_record/base.rb:479:in `initialize'
+  devise (2.1.2) app/controllers/devise_controller.rb:102:in `new'
+  devise (2.1.2) app/controllers/devise_controller.rb:102:in `build_resource'
+  devise (2.1.2) app/controllers/devise/sessions_controller.rb:8:in `new'
+  actionpack (3.2.1) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.2.1) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.1) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.1) lib/active_support/callbacks.rb:447:in `_run__1003812874__process_action__1030956460__callbacks'
+  activesupport (3.2.1) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.1) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.1) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.1) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.1) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.1) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.1) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.1) lib/action_controller/metal/params_wrapper.rb:205:in `process_action'
+  activerecord (3.2.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.1) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.1) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.1) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.1) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.1) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.1) lib/action_dispatch/routing/route_set.rb:66:in `call'
+  actionpack (3.2.1) lib/action_dispatch/routing/route_set.rb:66:in `dispatch'
+  actionpack (3.2.1) lib/action_dispatch/routing/route_set.rb:30:in `call'
+  actionpack (3.2.1) lib/action_dispatch/routing/mapper.rb:40:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.1) lib/action_dispatch/routing/route_set.rb:589:in `call'
+  warden (1.2.1) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.1) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.1) lib/warden/manager.rb:34:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/cookies.rb:338:in `call'
+  activerecord (3.2.1) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:443:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.1) lib/active_support/callbacks.rb:405:in `_run__178339943__call__849152443__callbacks'
+  activesupport (3.2.1) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.1) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/static.rb:53:in `call'
+  railties (3.2.1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.1) lib/rails/rack/log_tailer.rb:14:in `call'
+  thin (1.5.0) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.0) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.0) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.0) lib/thin/connection.rb:54:in `process'
+  thin (1.5.0) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run'
+  thin (1.5.0) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.0) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.1) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.1) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.1) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.1) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<top (required)>'
+  -e:1:in `load'
+  -e:1:in `<main>'
+
+
+  Rendered /home/andrey/.rvm/gems/ruby-1.9.3-p286@global/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (15.2ms)
+  Rendered /home/andrey/.rvm/gems/ruby-1.9.3-p286@global/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+  Rendered /home/andrey/.rvm/gems/ruby-1.9.3-p286@global/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (32.3ms)
+  [1m[36m (24.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (5.4ms)[0m   SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'schema_migrations'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+
+  [1m[36m (49.5ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.5ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to DeviseCreateAdminUsers (20121115180421)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (88.3ms)[0m  CREATE TABLE "admin_users" ("id" serial primary key, "email" character varying(255) DEFAULT '' NOT NULL, "encrypted_password" character varying(255) DEFAULT '' NOT NULL, "reset_password_token" character varying(255), "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying(255), "last_sign_in_ip" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (1.3ms)[0m  [1m SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'admin_users'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+[0m
+  [1m[35m (53.7ms)[0m  CREATE UNIQUE INDEX "index_admin_users_on_email" ON "admin_users" ("email")
+  [1m[36m (2.1ms)[0m  [1m SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'admin_users'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+[0m
+  [1m[35mColumns for index index_admin_users_on_email on admin_users (0.7ms)[0m   SELECT a.attnum, a.attname
+ FROM pg_attribute a
+ WHERE a.attrelid = 22813
+ AND a.attnum IN (2)
+
+  [1m[36m (40.6ms)[0m  [1mCREATE UNIQUE INDEX "index_admin_users_on_reset_password_token" ON "admin_users" ("reset_password_token")[0m
+  [1m[35mAdminUser Exists (1.2ms)[0m  SELECT 1 FROM "admin_users" WHERE "admin_users"."email" = 'admin@example.com' LIMIT 1
+  [1m[36mSQL (13.6ms)[0m  [1mINSERT INTO "admin_users" ("created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["created_at", Thu, 15 Nov 2012 18:11:25 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "admin@example.com"], ["encrypted_password", "$2a$10$G4m4ouL610FJFcUJ1qkHN.Z0OQN/O/9A5CmJzD8i0AuI19AWFemlq"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["updated_at", Thu, 15 Nov 2012 18:11:25 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121115180421')
+  [1m[36m (17.0ms)[0m  [1mCOMMIT[0m
+Migrating to CreateAdminNotes (20121115180430)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (89.2ms)[0m  [1mCREATE TABLE "admin_notes" ("id" serial primary key, "resource_id" character varying(255) NOT NULL, "resource_type" character varying(255) NOT NULL, "admin_user_id" integer, "admin_user_type" character varying(255), "body" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (2.0ms)[0m   SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'admin_notes'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+
+  [1m[36m (59.0ms)[0m  [1mCREATE INDEX "index_admin_notes_on_resource_type_and_resource_id" ON "admin_notes" ("resource_type", "resource_id")[0m
+  [1m[35m (2.2ms)[0m   SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'admin_notes'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+
+  [1m[36mColumns for index index_admin_notes_on_resource_type_and_resource_id on admin_notes (0.5ms)[0m  [1m SELECT a.attnum, a.attname
+ FROM pg_attribute a
+ WHERE a.attrelid = 22829
+ AND a.attnum IN (3,2)
+[0m
+  [1m[35m (36.6ms)[0m  CREATE INDEX "index_admin_notes_on_admin_user_type_and_admin_user_id" ON "admin_notes" ("admin_user_type", "admin_user_id")
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20121115180430')[0m
+  [1m[35m (12.4ms)[0m  COMMIT
+Migrating to MoveAdminNotesToComments (20121115180431)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (2.8ms)[0m   SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'admin_notes'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+
+  [1m[36mColumns for index index_admin_notes_on_admin_user_type_and_admin_user_id on admin_notes (0.7ms)[0m  [1m SELECT a.attnum, a.attname
+ FROM pg_attribute a
+ WHERE a.attrelid = 22829
+ AND a.attnum IN (5,4)
+[0m
+  [1m[35mColumns for index index_admin_notes_on_resource_type_and_resource_id on admin_notes (0.5ms)[0m   SELECT a.attnum, a.attname
+ FROM pg_attribute a
+ WHERE a.attrelid = 22829
+ AND a.attnum IN (3,2)
+
+  [1m[36m (0.7ms)[0m  [1mDROP INDEX "index_admin_notes_on_admin_user_type_and_admin_user_id"[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "admin_notes" RENAME TO "active_admin_comments"
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "active_admin_comments" RENAME COLUMN "admin_user_type" TO "author_type"[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "active_admin_comments" RENAME COLUMN "admin_user_id" TO "author_id"
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "active_admin_comments" ADD COLUMN "namespace" character varying(255)[0m
+  [1m[35m (2.0ms)[0m   SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'active_admin_comments'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+
+  [1m[36mColumns for index index_admin_notes_on_resource_type_and_resource_id on active_admin_comments (0.5ms)[0m  [1m SELECT a.attnum, a.attname
+ FROM pg_attribute a
+ WHERE a.attrelid = 22829
+ AND a.attnum IN (3,2)
+[0m
+  [1m[35m (33.4ms)[0m  CREATE INDEX "index_active_admin_comments_on_namespace" ON "active_admin_comments" ("namespace")
+  [1m[36m (2.4ms)[0m  [1m SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'active_admin_comments'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+[0m
+  [1m[35mColumns for index index_active_admin_comments_on_namespace on active_admin_comments (0.7ms)[0m   SELECT a.attnum, a.attname
+ FROM pg_attribute a
+ WHERE a.attrelid = 22829
+ AND a.attnum IN (9)
+
+  [1m[36mColumns for index index_admin_notes_on_resource_type_and_resource_id on active_admin_comments (0.5ms)[0m  [1m SELECT a.attnum, a.attname
+ FROM pg_attribute a
+ WHERE a.attrelid = 22829
+ AND a.attnum IN (3,2)
+[0m
+  [1m[35m (39.2ms)[0m  CREATE INDEX "index_active_admin_comments_on_author_type_and_author_id" ON "active_admin_comments" ("author_type", "author_id")
+  [1m[36m (0.4ms)[0m  [1mUPDATE active_admin_comments SET namespace='admin'[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121115180431')
+  [1m[36m (10.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (5.5ms)[0m  [1m SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'active_admin_comments'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+[0m
+  [1m[35mColumns for index index_active_admin_comments_on_author_type_and_author_id on active_admin_comments (0.8ms)[0m   SELECT a.attnum, a.attname
+ FROM pg_attribute a
+ WHERE a.attrelid = 22829
+ AND a.attnum IN (5,4)
+
+  [1m[36mColumns for index index_active_admin_comments_on_namespace on active_admin_comments (0.5ms)[0m  [1m SELECT a.attnum, a.attname
+ FROM pg_attribute a
+ WHERE a.attrelid = 22829
+ AND a.attnum IN (9)
+[0m
+  [1m[35mColumns for index index_admin_notes_on_resource_type_and_resource_id on active_admin_comments (0.5ms)[0m   SELECT a.attnum, a.attname
+ FROM pg_attribute a
+ WHERE a.attrelid = 22829
+ AND a.attnum IN (3,2)
+
+  [1m[36m (2.2ms)[0m  [1m SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'admin_users'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+[0m
+  [1m[35mColumns for index index_admin_users_on_email on admin_users (0.5ms)[0m   SELECT a.attnum, a.attname
+ FROM pg_attribute a
+ WHERE a.attrelid = 22813
+ AND a.attnum IN (2)
+
+  [1m[36mColumns for index index_admin_users_on_reset_password_token on admin_users (0.5ms)[0m  [1m SELECT a.attnum, a.attname
+ FROM pg_attribute a
+ WHERE a.attrelid = 22813
+ AND a.attnum IN (4)
+[0m
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2012-11-15 20:11:41 +0200
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendered /home/andrey/.rvm/gems/ruby-1.9.3-p286@global/gems/activeadmin-0.5.0/app/views/active_admin/devise/shared/_links.erb (4.2ms)
+  Rendered /home/andrey/.rvm/gems/ruby-1.9.3-p286@global/gems/activeadmin-0.5.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (601.2ms)
+Compiled active_admin.css  (3503ms)  (pid 7679)
+Compiled active_admin/print.css  (253ms)  (pid 7679)
+Compiled jquery.js  (10ms)  (pid 7679)
+Compiled jquery-ui.js  (62ms)  (pid 7679)
+Compiled jquery_ujs.js  (0ms)  (pid 7679)
+Compiled active_admin/lib/namespace.js  (109ms)  (pid 7679)
+Compiled active_admin/components/jquery.aa.checkbox-toggler.js  (14ms)  (pid 7679)
+Compiled active_admin/components/jquery.aa.dropdown-menu.js  (16ms)  (pid 7679)
+Compiled active_admin/components/jquery.aa.popover.js  (17ms)  (pid 7679)
+Compiled active_admin/components/jquery.aa.table-checkbox-toggler.js  (7ms)  (pid 7679)
+Compiled active_admin/pages/application.js  (1ms)  (pid 7679)
+Compiled active_admin/pages/batch_actions.js  (6ms)  (pid 7679)
+Compiled active_admin/application.js  (378ms)  (pid 7679)
+Compiled active_admin/base.js  (578ms)  (pid 7679)
+Compiled active_admin.js  (648ms)  (pid 7679)
+Completed 200 OK in 5390ms (Views: 5363.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2012-11-15 20:11:47 +0200
+Served asset /active_admin.css - 200 OK (17ms)
+
+
+Started GET "/assets/active_admin/lib/namespace.js?body=1" for 127.0.0.1 at 2012-11-15 20:11:47 +0200
+Served asset /active_admin/lib/namespace.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.checkbox-toggler.js?body=1" for 127.0.0.1 at 2012-11-15 20:11:47 +0200
+Served asset /active_admin/components/jquery.aa.checkbox-toggler.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.dropdown-menu.js?body=1" for 127.0.0.1 at 2012-11-15 20:11:47 +0200
+Served asset /active_admin/components/jquery.aa.dropdown-menu.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.popover.js?body=1" for 127.0.0.1 at 2012-11-15 20:11:47 +0200
+Served asset /active_admin/components/jquery.aa.popover.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.table-checkbox-toggler.js?body=1" for 127.0.0.1 at 2012-11-15 20:11:47 +0200
+Served asset /active_admin/components/jquery.aa.table-checkbox-toggler.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-15 20:11:47 +0200
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/active_admin/application.js?body=1" for 127.0.0.1 at 2012-11-15 20:11:47 +0200
+Served asset /active_admin/application.js - 304 Not Modified (17ms)
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.0.0.1 at 2012-11-15 20:11:47 +0200
+Served asset /active_admin/base.js - 304 Not Modified (91ms)
+
+
+Started GET "/assets/active_admin/pages/application.js?body=1" for 127.0.0.1 at 2012-11-15 20:11:47 +0200
+Served asset /active_admin/pages/application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/active_admin/pages/batch_actions.js?body=1" for 127.0.0.1 at 2012-11-15 20:11:47 +0200
+Served asset /active_admin/pages/batch_actions.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.0.0.1 at 2012-11-15 20:11:47 +0200
+Served asset /active_admin.js - 304 Not Modified (27ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2012-11-15 20:11:47 +0200
+Served asset /jquery-ui.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-15 20:11:47 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2012-11-15 20:11:47 +0200
+Served asset /active_admin/print.css - 200 OK (6ms)
+
+
+Started POST "/admin/login" for 127.0.0.1 at 2012-11-15 20:12:08 +0200
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M7xOfurBeIg70CYYEqWn4COxWRXIqYY0yeUcTXP3K1U=", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (2.0ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = 'admin@example.com' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.9ms)[0m  [1mUPDATE "admin_users" SET "remember_created_at" = '2012-11-15 18:12:08.564282', "updated_at" = '2012-11-15 18:12:08.566185' WHERE "admin_users"."id" = 1[0m
+  [1m[35m (17.6ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.7ms)[0m  UPDATE "admin_users" SET "last_sign_in_at" = '2012-11-15 18:12:08.652055', "current_sign_in_at" = '2012-11-15 18:12:08.652055', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2012-11-15 18:12:08.653866' WHERE "admin_users"."id" = 1
+  [1m[36m (3.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 632ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2012-11-15 20:12:08 +0200
+Processing by Admin::DashboardController#index as HTML
+  [1m[35mAdminUser Load (0.9ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1
+  Rendered /home/andrey/.rvm/gems/ruby-1.9.3-p286@global/gems/activeadmin-0.5.0/app/views/active_admin/page/index.html.arb (78.9ms)
+Completed 200 OK in 108ms (Views: 102.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2012-11-15 20:12:08 +0200
+Served asset /active_admin.js - 200 OK (2ms)
+
+
+Started GET "/admin/admin_users" for 127.0.0.1 at 2012-11-15 20:12:11 +0200
+Processing by Admin::AdminUsersController#index as HTML
+  [1m[36mAdminUser Load (0.9ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.8ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "admin_users" LIMIT 30 OFFSET 0) subquery_for_count 
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "admin_users" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "admin_users" LIMIT 30 OFFSET 0) subquery_for_count 
+  [1m[36mAdminUser Load (1.3ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" ORDER BY "admin_users"."id" desc LIMIT 30 OFFSET 0[0m
+  Rendered /home/andrey/.rvm/gems/ruby-1.9.3-p286@global/gems/activeadmin-0.5.0/app/views/active_admin/resource/index.html.arb (200.0ms)
+Completed 200 OK in 226ms (Views: 204.5ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/active_admin/orderable.png" for 127.0.0.1 at 2012-11-15 20:12:12 +0200
+Served asset /active_admin/orderable.png - 200 OK (32ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2012-11-15 20:12:13 +0200
+Processing by Admin::DashboardController#index as HTML
+  [1m[35mAdminUser Load (0.9ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1
+  Rendered /home/andrey/.rvm/gems/ruby-1.9.3-p286@global/gems/activeadmin-0.5.0/app/views/active_admin/page/index.html.arb (77.8ms)
+Completed 200 OK in 88ms (Views: 84.0ms | ActiveRecord: 0.9ms)
