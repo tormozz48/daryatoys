@@ -1,0 +1,25 @@
+ru:
+  admin:
+    category:
+      title: "Категории товаров"
+      fieldset:
+        title: "Параметры категории"
+      field:
+        category: "Родительская категория"
+        name: "Название категории"
+        description: "Описание категории"
+        enabled: "Опубликовано"
+    product:
+      title: "Товары"
+      fieldset:
+        title: "Параметры товаров"
+        images: "Изображения"
+      field:
+        category: "Категория товара"
+        name: "Название"
+        enabled: "Опубиковано"
+        description: "Описание"
+        price: "Цена"
+        status: "Статус товара"
+
+

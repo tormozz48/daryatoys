@@ -1,0 +1,9 @@
+ru:
+  product_status:
+    exist: "В наличии"
+    order: "Под заказ"
+  category:
+    name:
+      toys: "Игрушки"
+
+
