@@ -16,3 +16,4 @@ class Product < ActiveRecord::Base
   scope :_enabled, -> { where(:enabled => true) }
 
 end
+
