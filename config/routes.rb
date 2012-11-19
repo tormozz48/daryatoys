@@ -11,7 +11,9 @@ Daryatoys::Application.routes.draw do
   # Keep in mind you can assign values other than :controller and :action
 
   # Sample of named route:
-  #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
+  match 'application/index' => 'application#index'
+  match 'application/catalog' => 'application#catalog'
+  match 'application/contact' => 'application#contact'
   # This route can be invoked with purchase_url(:id => product.id)
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
@@ -52,7 +54,7 @@ Daryatoys::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  root :to => 'application#index'
 
   # See how all your routes lay out with "rake routes"
 

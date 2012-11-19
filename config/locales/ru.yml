@@ -1,5 +1,28 @@
 ru:
+  site:
+    title: "Вязаные игрушки от Дашки"
+    menu:
+      item_index: "Главная"
+      item_catalog: "Каталог"
+      item_contact: "Контакты"
   admin:
+    title: "Игрушки от Дашушки"
+    dashboard:
+      title: "Сводная информация"
+      category_count: "Кол-во категорий товара"
+      category_count_enabled: "Кол-во опубликованых категорий товара"
+      product_count: "Кол-во товаров"
+      product_count_enabled: "Кол-во опубликованых товаров"
+    admin_user:
+      title: "Администраторы"
+      fieldset:
+        title: "Администраторы"
+      email: "E-Mail"
+      current_sign_in: "Зашел в"
+      last_sign_in: "Последнее посещение"
+      sign_in_count: "Число входов в систему"
+      password: "Пароль"
+      password_confirmation: "Подтверждение пароля"
     category:
       title: "Категории товаров"
       fieldset:
