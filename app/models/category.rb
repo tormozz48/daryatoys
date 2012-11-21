@@ -18,4 +18,11 @@ class Category < ActiveRecord::Base
   #  return Category._enabled._with_enabled_products._order_by_name
   #end
 
+  def self.enable_all(ids)
+    Category.update_all({:enabled => true}, {:id => ids})
+  end
+
+  def self.disable_all(ids)
+    Category.update_all({:enabled => false}, {:id => ids})
+  end
 end

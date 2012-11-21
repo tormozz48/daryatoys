@@ -1,6 +1,7 @@
 ActiveAdmin.register Category do
   menu :priority => 3, :label => proc{ I18n.t('admin.category.title') }
   index :title => I18n.t('admin.category.title') do
+    selectable_column
     column I18n.t('admin.category.field.category'), :category
     column I18n.t('admin.category.field.name'), :name
     column I18n.t('admin.category.field.enabled'), :enabled
@@ -9,6 +10,16 @@ ActiveAdmin.register Category do
 
   filter :name, :label => I18n.t('admin.category.field.name')
   filter :enabled, :as => :check_boxes, :label => I18n.t('admin.category.field.enabled')
+
+  batch_action :mark_as_enabled do |selection|
+    Category.enable_all(selection)
+    redirect_to :back
+  end
+
+  batch_action :mark_as_disabled do |selection|
+    Category.disable_all(selection)
+    redirect_to :back
+  end
 
   form do |f|
     f.inputs I18n.t('admin.category.fieldset.title') do

@@ -44,5 +44,9 @@ ru:
         description: "Описание"
         price: "Цена"
         status: "Статус товара"
-
+  active_admin:
+    batch_actions:
+      labels:
+        mark_as_enabled: "Опубликовать"
+        mark_as_disabled: "Убрать с публикации"
 
