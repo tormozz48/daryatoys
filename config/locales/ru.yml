@@ -1,6 +1,7 @@
 ru:
   site:
-    title: "Вязаные игрушки от Дашки"
+    title: "Вязаные игрушки Darya Toys в Киеве"
+    copyright: "Андрей Кузнецов 2012 г.  Сайт разработан на платформе Ruby On Rails"
     menu:
       item_index: "Главная"
       item_catalog: "Каталог"
@@ -44,6 +45,16 @@ ru:
         description: "Описание"
         price: "Цена"
         status: "Статус товара"
+    contact:
+      title: "Контакты"
+      fieldset:
+        title: "Параметры контакта"
+      field:
+        email: "E-Mail"
+        phone1: "Телефон1"
+        phone2: "Телефон2"
+        area: "Адрес"
+        skype: "Skype"
   active_admin:
     batch_actions:
       labels:

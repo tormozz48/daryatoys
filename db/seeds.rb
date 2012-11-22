@@ -18,3 +18,7 @@ Category.delete_all
 Category.create([
     {name: I18n.t('category.name.toys')}
 ])
+
+Contact.delete_all
+
+Contact.create({:email => "darya.toys@gmail.com", :phone1 => "+380 50 190 5466"})
