@@ -15,5 +15,10 @@ class ApplicationController < ActionController::Base
 
   def contact
     @menu_item = ApplicationController::MENU_CONTACT
+    @comment = Comment.new
+  end
+
+  def comment_save
+
   end
 end

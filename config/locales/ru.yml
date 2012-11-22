@@ -51,10 +51,19 @@ ru:
         title: "Параметры контакта"
       field:
         email: "E-Mail"
-        phone1: "Телефон1"
-        phone2: "Телефон2"
+        phone1: "Телефон"
+        phone2: "Телефон"
         area: "Адрес"
         skype: "Skype"
+    comment:
+      title: "Отзывы"
+      fieldset:
+        title: "Параметры отзыва"
+      field:
+        email: "E-Mail"
+        fio: "Ф.И.О"
+        title: "Заголовок"
+        body: "Текст"
   active_admin:
     batch_actions:
       labels:

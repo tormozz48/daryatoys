@@ -1,0 +1,18 @@
+<div>
+  <%= semantic_form_for @comment do |f| %>
+      <%= f.inputs do %>
+          <%= f.input :email, :label => I18n.t('admin.comment.field.email') %>
+          <%= f.input :fio, :label => I18n.t('admin.comment.field.fio') %>
+          <%= f.input :title, :label => I18n.t('admin.comment.field.title') %>
+          <%= f.input :body, :label => I18n.t('admin.comment.field.body') %>
+
+          <%= f.label :humanizer_answer, @comment.humanizer_question %>
+          <%= f.text_field :humanizer_answer %>
+          <%= f.hidden_field :humanizer_question_id %>
+
+      <% end %>
+      <%= f.actions do %>
+          <%= f.action :submit, :as => :button %>
+      <% end %>
+  <% end %>
+</div>

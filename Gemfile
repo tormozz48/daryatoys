@@ -9,6 +9,7 @@ gem 'activeadmin'
 gem 'carrierwave'
 gem 'fog'
 gem 'formtastic'
+gem 'humanizer'
 
 
 group :assets do

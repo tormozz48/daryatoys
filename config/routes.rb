@@ -14,6 +14,7 @@ Daryatoys::Application.routes.draw do
   match 'application/index' => 'application#index'
   match 'application/catalog' => 'application#catalog'
   match 'application/contact' => 'application#contact'
+  match 'comments' => 'application#comment_save'
   # This route can be invoked with purchase_url(:id => product.id)
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
