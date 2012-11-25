@@ -1,4 +1,4 @@
-body{
+  body{
   padding-top: 10px;
   padding-bottom: 10px;
   background: url(image_path('background/background1.jpg')) repeat;
@@ -85,3 +85,6 @@ body{
   font-size: 12px;
 }
 
+input.comment-field, textarea.comment-field{
+  width: 400px;
+}

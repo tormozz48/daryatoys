@@ -1,0 +1,24 @@
+<% if flash[:notice] %>
+    <div class="alert alert-success">
+      <button type="button" class="close" data-dismiss="alert">×</button>
+      <div>
+        <%=image_tag 'photo.png', :class => "img-polaroid"%>
+      </div>
+      <div>
+        <%= flash[:notice] %><%=link_to t('site.button.send_again'), application_contact_path%>
+      </div>
+    </div>
+<% end %>
+
+<!--errors block-->
+<% if flash[:error] %>
+    <div class="alert alert-error">
+      <button type="button" class="close" data-dismiss="alert">×</button>
+      <div>
+        <%=image_tag 'photo.png', :class => "img-polaroid"%>
+      </div>
+      <div>
+        <%= flash[:error] %>
+      </div>
+    </div>
+<% end %>

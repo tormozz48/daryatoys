@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.1'
+gem 'rails'
 gem 'thin'
 gem 'pg'
 
@@ -18,7 +18,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'twitter-bootstrap-rails'
+#gem 'twitter-bootstrap-rails'
 gem 'jquery-rails'
 gem 'therubyracer'
 gem 'execjs'
@@ -34,4 +34,7 @@ gem 'execjs'
 # gem 'capistrano'
 
 # To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
+#gem 'ruby-debug19', :require => 'ruby-debug'
+#gem 'ruby-debug-base19x'
+#gem 'ruby-debug-ide'
+

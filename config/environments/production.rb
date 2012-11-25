@@ -68,4 +68,16 @@ Daryatoys::Application.configure do
   config.assets.precompile += %w( active_admin.css active_admin.js active_admin/print.css )
 
   config.action_mailer.default_url_options = { :host => 'daryatoys.herokuapp.com' }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.default :charset => "utf-8"
+  config.action_mailer.smtp_settings = {
+      :address              => "smtp.gmail.com",
+      :port                 => 587,
+      :domain               => 'daryatoys.herokuapp.com',
+      :user_name            => 'tormozoid48@gmail.com',
+      :password             => 'tormozoid',
+      :authentication       => 'plain',
+      :enable_starttls_auto => true  }
 end

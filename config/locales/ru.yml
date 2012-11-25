@@ -6,6 +6,12 @@ ru:
       item_index: "Главная"
       item_catalog: "Каталог"
       item_contact: "Контакты"
+    button:
+      send: "Отправить сообщение"
+      send_again: "сюда"
+    email_subject: "Отзыв от пользователей сайта %{site}"
+    notification:
+      comment_was_sended: "Ваше сообщение успешно отправлено. Я свяжусь с вами при первой возможности. Если вы хотите написать еще что-нибудь то нажмите "
   admin:
     title: "Игрушки от Дашушки"
     dashboard:
@@ -59,9 +65,11 @@ ru:
       title: "Отзывы"
       fieldset:
         title: "Параметры отзыва"
+        legend: "Контакт"
+        captha_hint: "докажи что ты человек"
       field:
         email: "E-Mail"
-        fio: "Ф.И.О"
+        fio: "Ф.И.О."
         title: "Заголовок"
         body: "Текст"
   active_admin:

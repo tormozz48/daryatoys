@@ -11,33 +11,33 @@ module ApplicationHelper
     return @menu_item == ApplicationController::MENU_CONTACT
   end
 
-  def get_email
+  def get_email(contact)
     return content_tag(:div,
              content_tag(:span, I18n.t('admin.contact.field.email')) + ": " +
-             content_tag(:span, Contact.first.email)) if !Contact.first.email.blank?
+             content_tag(:span, contact.email)) if !contact.email.blank?
   end
 
-  def get_phone1
+  def get_phone1(contact)
     return content_tag(:div,
              content_tag(:span, I18n.t('admin.contact.field.phone1')) + ": " +
-             content_tag(:span, Contact.first.phone1)) if !Contact.first.phone1.blank?
+             content_tag(:span, contact.phone1)) if !contact.phone1.blank?
   end
 
-  def get_phone2
+  def get_phone2(contact)
     return content_tag(:div,
              content_tag(:span, I18n.t('admin.contact.field.phone2')) + ": " +
-             content_tag(:span, Contact.first.phone2)) if !Contact.first.phone2.blank?
+             content_tag(:span, contact.phone2)) if !contact.phone2.blank?
   end
 
-  def get_area
+  def get_area(contact)
     return content_tag(:div,
              content_tag(:span, I18n.t('admin.contact.field.area')) + ": " +
-             content_tag(:span, Contact.first.area)) if !Contact.first.area.blank?
+             content_tag(:span, contact.area)) if !contact.area.blank?
   end
 
-  def get_skype
+  def get_skype(contact)
     return content_tag(:div,
              content_tag(:span, I18n.t('admin.contact.field.skype')) + ": " +
-             content_tag(:span, Contact.first.skype)) if !Contact.first.skype.blank?
+             content_tag(:span, contact.skype)) if !contact.skype.blank?
   end
 end

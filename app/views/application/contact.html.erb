@@ -1,18 +1,117 @@
 <div>
-  <%= semantic_form_for @comment do |f| %>
-      <%= f.inputs do %>
-          <%= f.input :email, :label => I18n.t('admin.comment.field.email') %>
-          <%= f.input :fio, :label => I18n.t('admin.comment.field.fio') %>
-          <%= f.input :title, :label => I18n.t('admin.comment.field.title') %>
-          <%= f.input :body, :label => I18n.t('admin.comment.field.body') %>
+  <%=form_for(@comment, :url => application_contact_send_path(@comment), :html => {:class=> "form-horizontal well"}) do |f|%>
+    <%= f.hidden_field :humanizer_question_id %>
 
-          <%= f.label :humanizer_answer, @comment.humanizer_question %>
-          <%= f.text_field :humanizer_answer %>
-          <%= f.hidden_field :humanizer_question_id %>
+    <legend><%=t('admin.comment.fieldset.legend')%></legend>
 
-      <% end %>
-      <%= f.actions do %>
-          <%= f.action :submit, :as => :button %>
-      <% end %>
-  <% end %>
+    <!-- field email start -->
+    <div <% if @comment.errors[:email].present? %>
+            class="control-group error"
+         <%elsif @comment.errors.any?%>
+            class="control-group success"
+         <%else%>
+            class="control-group"
+         <% end %>>
+      <label class="control-label" for="email">
+        <%=t('admin.comment.field.email')%>:
+      </label>
+      <div class="controls">
+        <%=f.email_field :email, :id => :email, :class => "comment-field"%>
+        <% if @comment.errors[:email].present? %>
+            <% @comment.errors[:email].each do |msg|%>
+                <p class="help-block"><%= msg%></p>
+            <%end%>
+        <%end%>
+      </div>
+    </div>
+    <!-- field email end -->
+
+    <!-- field fio start -->
+    <div <% if @comment.errors[:fio].present? %>
+            class="control-group error"
+         <%elsif @comment.errors.any?%>
+            class="control-group success"
+         <%else%>
+            class="control-group"
+         <% end %>>
+      <label class="control-label" for="fio">
+        <%=t('admin.comment.field.fio')%>:
+      </label>
+      <div class="controls">
+        <%=f.text_field :fio, :id => :fio, :class => "comment-field"%>
+        <% if @comment.errors[:fio].present? %>
+            <% @comment.errors[:fio].each do |msg|%>
+                <p class="help-block"><%= msg%></p>
+            <%end%>
+        <%end%>
+      </div>
+    </div>
+    <!-- field fio end -->
+
+    <!-- field title start -->
+    <div <% if @comment.errors[:title].present? %>
+            class="control-group error"
+         <%elsif @comment.errors.any?%>
+            class="control-group success"
+         <%else%>
+            class="control-group"
+         <% end %>>
+      <label class="control-label" for="title">
+        <%=t('admin.comment.field.title')%>:
+      </label>
+      <div class="controls">
+        <%=f.text_field :title, :id => :title, :class => "comment-field"%>
+        <% if @comment.errors[:title].present? %>
+            <% @comment.errors[:title].each do |msg|%>
+                <p class="help-block"><%= msg%></p>
+            <%end%>
+        <%end%>
+      </div>
+    </div>
+    <!-- field title end -->
+
+    <!-- field body start-->
+    <div <% if @comment.errors[:body].present? %>
+            class="control-group error"
+         <%elsif @comment.errors.any?%>
+            class="control-group success"
+         <%else%>
+            class="control-group"
+         <% end %>>
+      <label class="control-label" for="body">
+        <%=t('admin.comment.field.body')%>:
+      </label>
+      <div class="controls">
+        <%=f.text_area :body, :id => :body, :cols => 40, :rows => 5, :class => "comment-field"%>
+        <% if @comment.errors[:body].present? %>
+            <% @comment.errors[:body].each do |msg|%>
+                <p class="help-block"><%= msg%></p>
+            <%end%>
+        <%end%>
+      </div>
+    </div>
+    <!-- field body end -->
+
+    <div <% if @comment.errors[:humanizer_answer].present? %>
+            class="control-group error"
+         <%elsif @comment.errors.any?%>
+            class="control-group success"
+         <%else%>
+            class="control-group"
+         <% end %>>
+      <label class="control-label" for="humanizer_answer">
+        <%=@comment.humanizer_question%>:
+      </label>
+      <div class="controls">
+        <%=f.text_field :humanizer_answer, :id => "humanizer_answer", :class => "comment-field"%>
+        <span class="help-inline"><%=t('admin.comment.fieldset.captha_hint')%></span>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <div class="controls">
+        <%=f.submit t('site.button.send'), :class => "btn btn-primary"%>
+      </div>
+    </div>
+  <%end%>
 </div>

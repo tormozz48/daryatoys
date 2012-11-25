@@ -9,4 +9,11 @@ class Comment < ActiveRecord::Base
 
   include Humanizer
   require_human_on :create
+
+  after_create :send_email
+
+  protected
+  def send_email
+    CommentMailer.comment_email(self).deliver
+  end
 end
