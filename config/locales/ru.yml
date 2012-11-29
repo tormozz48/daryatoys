@@ -9,9 +9,14 @@ ru:
     button:
       send: "Отправить сообщение"
       send_again: "сюда"
+      details: "Подробнее"
     email_subject: "Отзыв от пользователей сайта %{site}"
     notification:
       comment_was_sended: "Ваше сообщение успешно отправлено. Я свяжусь с вами при первой возможности. Если вы хотите написать еще что-нибудь то нажмите "
+    product:
+      price: "Цена"
+      currency: "грн."
+      status: "Наличие"
   admin:
     title: "Игрушки от Дашушки"
     dashboard:

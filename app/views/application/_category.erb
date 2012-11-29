@@ -1,0 +1,10 @@
+<div class="category-title">
+   <span><%=category.name%></span>
+</div>
+<%if category.categories.empty?%>
+     <div class = "products-container">
+        <%= render :partial => "application/product", :collection => category.products %>
+     </div>
+<%else%>
+    <%= render :partial => "application/category", :collection => @categories %>
+<%end%>

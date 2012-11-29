@@ -1,0 +1,21 @@
+<div class="product-item">
+  <div class="product-title">
+    <span>
+      <%=product.name%>
+    </span>
+  </div>
+  <div class="product-image">
+     <%if product.get_primary_image.nil?%>
+       <%=image_tag 'no_image.png'%>
+     <%else%>
+        <%=cl_image_tag product.product_images.first.image.url(:thumbnail)%>
+     <%end%>
+  </div>
+  <div class="product-details">
+    <%=t('site.product.price')%>: <%=product.price%> <%=t('site.product.currency')%>
+    <br/>
+    <%=t('site.product.status')%>: <%=product.product_status.name%>
+    <br/>
+    <%=link_to t('site.button.details'), application_catalog_path(:id => product.id), :class => "btn btn-primary"%>
+  </div>
+</div>

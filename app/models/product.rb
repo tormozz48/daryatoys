@@ -1,5 +1,5 @@
 class Product < ActiveRecord::Base
-  validates :name, :description, :price, :enabled, :category, :product_status, :presence => true
+  validates :name, :description, :price, :enabled, :category_id, :product_status_id, :presence => true
   validates :name, :uniqueness => true
   validates :name, :length => { :minimum => 3, :maximum => 255 }
   validates :enabled, :inclusion => { :in => [true, false] }
@@ -10,8 +10,9 @@ class Product < ActiveRecord::Base
   belongs_to :product_status
   has_many :product_images, :dependent => :delete_all
 
-  attr_accessible :name, :description, :enabled, :price, :category
-  attr_accessible :category_id, :product_status, :product_status_id, :product_images, :product_images_attributes
+  attr_accessible :name, :description, :enabled, :price
+  attr_accessible :category, :category_id, :product_status, :product_status_id
+  attr_accessible :product_images, :product_images_attributes
 
   accepts_nested_attributes_for :product_images
 
@@ -23,6 +24,14 @@ class Product < ActiveRecord::Base
 
   def self.disable_all(ids)
     Product.update_all({:enabled => false}, {:id => ids})
+  end
+
+  def get_primary_image
+    if self.product_images.empty?
+       return nil
+    else
+       return self.product_images.first.image.url(:thumbnail)
+    end
   end
 end
 

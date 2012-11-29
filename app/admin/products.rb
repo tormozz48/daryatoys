@@ -35,7 +35,7 @@ ActiveAdmin.register Product do
       f.input :price, :label =>  I18n.t('admin.product.field.price')
       f.input :description, :label =>  I18n.t('admin.product.field.description')
       f.has_many :product_images do |j|
-        j.input :image, :as=> :file, :hint => j.template.image_tag(j.object.image.url)
+        j.input :image, :as=> :file, :hint => j.template.image_tag(j.object.image.url(:thumbnail))
         j.input :image_cache, :as => :hidden
       end
     end

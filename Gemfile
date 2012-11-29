@@ -10,6 +10,7 @@ gem 'carrierwave'
 gem 'fog'
 gem 'formtastic'
 gem 'humanizer'
+gem 'cloudinary'
 
 
 group :assets do

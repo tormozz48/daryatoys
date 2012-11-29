@@ -88,3 +88,51 @@
 input.comment-field, textarea.comment-field{
   width: 400px;
 }
+
+.catalog{
+  margin: -10px;
+  background-color: #977;
+}
+
+.category-title{
+  height: 25px;
+  margin-left: 40px;
+  margin-right: 40px;
+  padding-top: 2px;
+  background-color: #933;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.category-title span{
+  font-weight: bold;
+  color: #fff;
+}
+
+.products-container{
+  padding-left: 35px;
+}
+
+.product-item{
+  display: inline-block;
+  width: 160px;
+  margin: 5px;
+  padding: 5px;
+  background-color: #933;
+  color: #ffffff;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.product-item:hover{
+  background-color: #933;
+}
+
+.product-title{
+  padding-bottom: 3px;
+}
+
+.product-title span{
+  font-weight: bold;
+}
