@@ -34,9 +34,12 @@ ActiveAdmin.register Product do
       f.input :product_status, :label =>  I18n.t('admin.product.field.status')
       f.input :price, :label =>  I18n.t('admin.product.field.price')
       f.input :description, :label =>  I18n.t('admin.product.field.description')
-      f.has_many :product_images do |j|
-        j.input :image, :as=> :file, :hint => j.template.image_tag(j.object.image.url(:thumbnail))
-        j.input :image_cache, :as => :hidden
+      f.inputs "images" do
+        f.has_many :product_images do |j|
+          j.input :image_cache, :as => :hidden
+          j.input :image, :as=> :file, :label => I18n.t('admin.product.field.image'), :multipart => true
+          j.input :_destroy, :as=>:boolean, :required => false, :label=> I18n.t('admin.product.field.image_delete')
+        end
       end
     end
     f.buttons

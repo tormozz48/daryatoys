@@ -56,6 +56,8 @@ ru:
         description: "Описание"
         price: "Цена"
         status: "Статус товара"
+        image: "Изображение продукта"
+        image_delete: "Удалить изображение"
     contact:
       title: "Контакты"
       fieldset:
