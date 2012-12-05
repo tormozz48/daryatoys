@@ -11,8 +11,8 @@ class ApplicationController < ActionController::Base
   end
 
   def catalog
+    @menu_item = ApplicationController::MENU_CATALOG
     if params[:id].nil?
-      @menu_item = ApplicationController::MENU_CATALOG
       @categories = Category._enabled._order_by_name
     else
       @product = Product.find(params[:id])

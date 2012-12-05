@@ -17,6 +17,10 @@ class Category < ActiveRecord::Base
     return self.products._enabled.size > 0
   end
 
+  def get_enabled_products
+    return self.products._enabled
+  end
+
   def self.enable_all(ids)
     Category.update_all({:enabled => true}, {:id => ids})
   end

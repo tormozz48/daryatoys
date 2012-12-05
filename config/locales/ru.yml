@@ -10,6 +10,8 @@ ru:
       send: "Отправить сообщение"
       send_again: "сюда"
       details: "Подробнее"
+      order: "Сделать заказ"
+      goto_catalog: "Вернуться на страницу каталога"
     email_subject: "Отзыв от пользователей сайта %{site}"
     notification:
       comment_was_sended: "Ваше сообщение успешно отправлено. Я свяжусь с вами при первой возможности. Если вы хотите написать еще что-нибудь то нажмите "
@@ -48,7 +50,6 @@ ru:
       title: "Товары"
       fieldset:
         title: "Параметры товаров"
-        images: "Изображения"
       field:
         category: "Категория товара"
         name: "Название"
@@ -56,8 +57,13 @@ ru:
         description: "Описание"
         price: "Цена"
         status: "Статус товара"
-        image: "Изображение продукта"
-        image_delete: "Удалить изображение"
+    product_image:
+      title: "Изображения товара"
+      fieldset:
+        title: "Параметры изображения товара"
+      field:
+        product: "Товар"
+        image: "Изображение"
     contact:
       title: "Контакты"
       fieldset:
@@ -79,6 +85,7 @@ ru:
         fio: "Ф.И.О."
         title: "Заголовок"
         body: "Текст"
+    different: "Разное"
   active_admin:
     batch_actions:
       labels:

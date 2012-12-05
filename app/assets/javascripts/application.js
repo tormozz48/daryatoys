@@ -14,10 +14,3 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require_tree .
-
-//jQuery(document).ready(function(){
-//   jQuery('.btn-primary').click(function(){
-//       var url = jQuery(this).attr('data_url');
-//       window.location.href = url;
-//   });
-//});

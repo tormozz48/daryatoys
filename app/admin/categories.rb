@@ -1,5 +1,5 @@
 ActiveAdmin.register Category do
-  menu :priority => 3, :label => proc{ I18n.t('admin.category.title') }
+  menu :priority => 2, :label => proc{ I18n.t('admin.category.title') }
   index :title => I18n.t('admin.category.title') do
     selectable_column
     column I18n.t('admin.category.field.category'), :category

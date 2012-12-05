@@ -1,5 +1,5 @@
 ActiveAdmin.register Product do
-  menu :priority => 4, :label => proc{ I18n.t('admin.product.title') }
+  menu :priority => 3, :label => proc{ I18n.t('admin.product.title') }
   index :title => I18n.t('admin.product.title') do
     selectable_column
     column I18n.t('admin.product.field.category'), :category
@@ -34,13 +34,6 @@ ActiveAdmin.register Product do
       f.input :product_status, :label =>  I18n.t('admin.product.field.status')
       f.input :price, :label =>  I18n.t('admin.product.field.price')
       f.input :description, :label =>  I18n.t('admin.product.field.description')
-      f.inputs "images" do
-        f.has_many :product_images do |j|
-          j.input :image_cache, :as => :hidden
-          j.input :image, :as=> :file, :label => I18n.t('admin.product.field.image'), :multipart => true
-          j.input :_destroy, :as=>:boolean, :required => false, :label=> I18n.t('admin.product.field.image_delete')
-        end
-      end
     end
     f.buttons
   end

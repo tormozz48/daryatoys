@@ -1,5 +1,5 @@
 ActiveAdmin.register Contact do
-  menu :priority => 5, :label => proc{ I18n.t('admin.contact.title') }
+  menu :priority => 6, :parent=>I18n.t('admin.different'), :label => proc{ I18n.t('admin.contact.title') }
   index :title => I18n.t('admin.contact.title') do
     column I18n.t('admin.contact.field.email'), :email
     column I18n.t('admin.contact.field.phone1'), :phone1
