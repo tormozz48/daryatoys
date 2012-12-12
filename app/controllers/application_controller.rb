@@ -15,8 +15,16 @@ class ApplicationController < ActionController::Base
     if params[:id].nil?
       @categories = Category._enabled._order_by_name
     else
+      if !Product.select("id").include?(params[:id])
+        self.render_404 and return
+      end
+
       @product = Product.find(params[:id])
-      render 'application/product_detail'
+      if @product.nil?
+        self.render_404 and return
+      else
+        render 'application/product_detail'
+      end
     end
   end
 
@@ -38,8 +46,26 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def render_404
+    respond_to do |format|
+      format.html { render :file => "#{Rails.root}/public/404.html", :layout => nil, :status => :not_found }
+      format.xml { head :not_found }
+      format.any { head :not_found }
+    end
+  end
+
+  def render_500
+    respond_to do |format|
+      format.html { render :file => "#{Rails.root}/public/500.html", :layout => nil, :status => :not_found }
+      format.xml { head :not_found }
+      format.any { head :not_found }
+    end
+  end
+
   private
   def retrieve_contact
     @contact = Contact.first
   end
+
+
 end

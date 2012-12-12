@@ -9,6 +9,7 @@ class Product < ActiveRecord::Base
   belongs_to :category
   belongs_to :product_status
   has_many :product_images, :dependent => :delete_all
+  has_many :product_orders, :dependent => :delete_all
 
   attr_accessible :name, :description, :enabled, :price
   attr_accessible :category, :category_id, :product_status, :product_status_id

@@ -1,5 +1,5 @@
 ActiveAdmin.register AdminUser do
-  menu :priority => 5, :parent=>I18n.t('admin.different'), :label => proc{ I18n.t('admin.admin_user.title') }
+  menu :priority => 6, :parent=>I18n.t('admin.different'), :label => proc{ I18n.t('admin.admin_user.title') }
 
   index :title => I18n.t('admin.admin_user.title') do
     column I18n.t('admin.admin_user.email'), :email

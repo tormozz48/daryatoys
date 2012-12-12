@@ -11,7 +11,7 @@ class Category < ActiveRecord::Base
   scope :_enabled, -> { where(:enabled => true) }
   scope :_order_by_name, -> { order('name asc') }
 
-  attr_accessible :name, :enabled, :category, :categories
+  attr_accessible :name, :enabled, :category, :categories, :category_id
 
   def has_enabled_products
     return self.products._enabled.size > 0
