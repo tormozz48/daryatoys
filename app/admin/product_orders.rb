@@ -11,7 +11,7 @@ ActiveAdmin.register ProductOrder do
     default_actions
   end
 
-  actions :all, :except => [:new, :edit, :destroy]
+  actions :all, :except => [:new, :edit]
 
   filter :order_status, :label => I18n.t('admin.order.field.order_status')
   filter :product, :label => I18n.t('admin.order.field.product')

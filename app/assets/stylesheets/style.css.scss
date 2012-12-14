@@ -172,3 +172,21 @@ input.comment-field, textarea.comment-field{
   padding-top: 0px;
   text-align: center;
 }
+
+.order-send-photo, .order-send-text{
+  display: inline-block;
+}
+
+.order-send-text{
+  width: 500px;
+  vertical-align: top;
+}
+
+.order-send-buttons{
+  padding: 10px;
+  text-align: center;
+}
+
+.modal{
+  width: 700px;
+}

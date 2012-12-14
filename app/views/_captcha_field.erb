@@ -1,0 +1,16 @@
+<div <% if model.errors[:humanizer_answer].present? %>
+        class="control-group error"
+     <%elsif model.errors.any?%>
+        class="control-group success"
+     <%else%>
+        class="control-group"
+     <% end %>>
+  <label class="control-label" for="humanizer_answer">
+    <%=model.humanizer_question%>:
+  </label>
+  <div class="controls">
+    <%=form.text_field :humanizer_answer, :id => "humanizer_answer",
+                       :class => "comment-field", :required => "required"%>
+    <span class="help-inline"><%=t('admin.comment.fieldset.captha_hint')%></span>
+  </div>
+</div>

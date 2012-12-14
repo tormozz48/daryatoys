@@ -15,14 +15,20 @@ class ApplicationController < ActionController::Base
     if params[:id].nil?
       @categories = Category._enabled._order_by_name
     else
-      if !Product.select("id").include?(params[:id])
-        self.render_404 and return
-      end
 
       @product = Product.find(params[:id])
       if @product.nil?
         self.render_404 and return
       else
+        @product_order = ProductOrder.new({
+            product_id: @product.id,
+            order_status_id: OrderStatus.get_new.id,
+            email: "",
+            phone: "",
+            first_name: "",
+            last_name: "",
+            comment: ""
+        })
         render 'application/product_detail'
       end
     end
@@ -36,13 +42,35 @@ class ApplicationController < ActionController::Base
   def comment_save
     @comment = Comment.new(params[:comment])
     if @comment.valid?
-      @comment.save
-      flash[:notice] = I18n.t('site.notification.comment_was_sended')
-      respond_to do |format|
-        format.html {render 'application/contact_send'}
+      if @comment.save
+        flash[:notice] = I18n.t('site.notification.comment_was_sended')
+        respond_to do |format|
+          format.html {render 'application/contact_send'}
+        end
       end
     else
       render :'application/contact'
+    end
+  end
+
+  def order_send
+    @product_order = ProductOrder.new(params[:product_order])
+    if @product_order.valid?
+      if @product_order.save
+        flash[:notice] = I18n.t('site.notification.order_was_created',
+                                :product => @product_order.product.name,
+                                :price => @product_order.product.price,
+                                :email => @product_order.email,
+                                :phone => @product_order.phone)
+      end
+    else
+      @product = Product.find(params[:product_order][:product_id])
+      if @product.nil?
+        self.render_404 and return
+      else
+        flash[:error] = I18n.t('site.notification.order_error')
+        render 'application/product_detail'
+      end
     end
   end
 

@@ -1,0 +1,20 @@
+<!-- text field start -->
+<div class=<%=get_field_class(model, field)%>>
+  <label class="control-label" for="<%=field%>">
+    <%=label%>:
+  </label>
+  <div class="controls">
+    <%=form.telephone_field field, :id => field, :class => "comment-field",
+          :maxlength => maxlength, :required => "required",
+         #:placeholder => '+0-(000)-000-00-00',
+          :pattern => '[\+]\d{1}[\-][\(]\d{3}[\)][\-]\d{3}[\-]\d{2}[\-]\d{2}'
+    %>
+    <p class="help-block">+0-(000)-000-00-00</p>
+    <% if model.errors[field].present? %>
+        <% model.errors[field].each do |msg|%>
+            <p class="help-block"><%= msg%></p>
+        <%end%>
+    <%end%>
+  </div>
+</div>
+<!-- text field end -->

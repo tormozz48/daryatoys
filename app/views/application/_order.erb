@@ -1,3 +1,61 @@
-<div>
+<div id="order_form_id" class="modal hide fade">
+  <%=form_for(@product_order, :url => application_order_send_path(@product_order), :html => {:class=> "form-horizontal well"}) do |f|%>
+      <%= f.hidden_field :humanizer_question_id %>
+      <%= f.hidden_field :product_id %>
+      <%= f.hidden_field :order_status_id %>
 
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h3><%=t('site.order.legend')%></h3>
+      </div>
+
+      <div class="modal-body">
+          <!-- field email -->
+          <%=render :partial => '/email_field',
+                      :locals => {:form => f,
+                                  :model => @product_order,
+                                  :field => :email,
+                                  :label => t('site.order.field.email')}%>
+
+          <!-- field phone -->
+          <%=render :partial => '/phone_field',
+                    :locals => {:form => f,
+                                :model => @product_order,
+                                :field => :phone,
+                                :label => t('site.order.field.phone'),
+                                :maxlength => 20}%>
+
+          <!-- field first name -->
+          <%=render :partial => '/text_field',
+                    :locals => {:form => f,
+                                :model => @product_order,
+                                :field => :first_name,
+                                :label => t('site.order.field.first_name'),
+                                :maxlength => 30}%>
+
+          <!-- field last name -->
+          <%=render :partial => '/text_field',
+                    :locals => {:form => f,
+                                :model => @product_order,
+                                :field => :last_name,
+                                :label => t('site.order.field.last_name'),
+                                :maxlength => 30}%>
+
+          <!-- field comment -->
+          <%=render :partial => '/text_area',
+                    :locals => {:form => f,
+                                :model => @product_order,
+                                :field => :comment,
+                                :label => t('site.order.field.comment')}%>
+
+          <!-- field captcha -->
+          <%=render :partial => '/captcha_field',
+                    :locals => {:form => f,
+                                :model => @product_order}%>
+      </div>
+      <div class="modal-footer">
+          <%=f.submit t('site.button.order_submit'), :class => "btn btn-primary"%>
+      </div>
+  <%end%>
 </div>
+

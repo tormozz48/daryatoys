@@ -1,0 +1,35 @@
+<p>
+  <%=t('site.order_email_notification.part1')%> <%=t('site.title')%>.
+</p>
+
+<p>
+  <%=t('site.order_email_notification.part2')%>:
+</p>
+
+<p>
+  <%=t('site.order.field.first_name')%>: <%=@product_order.first_name%>
+</p>
+
+<p>
+  <%=t('site.order.field.first_name')%>: <%=@product_order.last_name%>
+</p>
+
+<p>
+  <%=t('site.order_email_notification.part3')%> <%=@product_order.product.name%> <%=t('site.order_email_notification.part4')%> <%=@product_order.product.price%> <%=t('site.product.currency')%>
+</p>
+
+<p>
+  <%=t('site.order_email_notification.part5')%>:
+</p>
+
+<p>
+  <%=@product_order.comment%>
+</p>
+
+<p>
+  <%=t('site.order.field.email')%> <%=t('site.order_email_notification.part6')%>: <%=@product_order.email%>
+</p>
+
+<p>
+  <%=t('site.order.field.phone')%> <%=t('site.order_email_notification.part6')%>: <%=@product_order.phone%>
+</p>

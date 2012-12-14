@@ -1,0 +1,16 @@
+<!-- text field start -->
+<div class=<%=get_field_class(model, field)%>>
+  <label class="control-label" for="<%=field%>">
+    <%=label%>:
+  </label>
+  <div class="controls">
+    <%=form.text_field field, :id => field, :class => "comment-field",
+                       :maxlength => maxlength, :required => "required", :autocomplete => "on"%>
+    <% if model.errors[field].present? %>
+        <% model.errors[field].each do |msg|%>
+            <p class="help-block"><%= msg%></p>
+        <%end%>
+    <%end%>
+  </div>
+</div>
+<!-- text field end -->

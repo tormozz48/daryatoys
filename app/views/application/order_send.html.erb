@@ -1,0 +1,30 @@
+<div class="alert alert-success">
+  <button type="button" class="close" data-dismiss="alert">×</button>
+  <div class="order-send-photo">
+    <%=image_tag 'photo.png', :class => "img-polaroid"%>
+  </div>
+  <div class="order-send-text">
+    <h3><%=t('site.notification.order_was_created.title')%></h3>
+    <p>
+      <%=t('site.notification.order_was_created.part1')%>
+      <strong><%=@product_order.product.name%></strong>
+      <%=t('site.notification.order_was_created.part2')%>
+      <strong><%=@product_order.product.price%></strong>
+      <%=t('site.product.currency')%>
+      <%=t('site.notification.order_was_created.part3')%>
+    </p>
+    <p>
+      <%=t('site.notification.order_was_created.part4')%>:
+    </p>
+    <p>
+      <%=t('site.order.field.email')%>: <strong><%=@product_order.email%></strong>
+    </p>
+    <p>
+      <%=t('site.order.field.phone')%>: <strong><%=@product_order.phone%></strong>
+    </p>
+  </div>
+</div>
+<div class="order-send-buttons">
+    <%=link_to "Вернуться на страницу продукта", application_catalog_path(:id => @product_order.product.id), :class => "btn  btn-primary"%>
+    <%=link_to "Вернуться на страницу каталога", application_catalog_path(), :class => "btn btn-primary"%>
+</div>

@@ -3,20 +3,33 @@
 <head>
   <title>Ошибка 500</title>
   <style type="text/css">
-    body{background: #111;}
+    body{background: #222;}
     .error_page{
         width: 500px;
         margin: auto;
         text-align: center;
         color: #ddd;
     }
+    .image{
+        width: 500px;
+        height: 375px;
+        background: url("/error_page.jpg");
+        border: 1px solid #ffffff;
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px #000;
+    }
+    h1, p{
+        text-shadow: 5px 5px 10px #000;
+    }
   </style>
 </head>
 
 <body>
-  <!-- This file lives in public/500.html -->
-  <div class="dialog">
-    <h1>We're sorry, but something went wrong.</h1>
+  <!-- This file lives in public/404.html -->
+  <div class="error_page">
+    <h1>Произошла ошибка сервера</h1>
+    <p>В скором времени она будет устранена</p>
+    <div class="image"></div>
   </div>
 </body>
 </html>

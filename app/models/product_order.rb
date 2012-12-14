@@ -1,6 +1,7 @@
 class ProductOrder < ActiveRecord::Base
 
-  attr_accessible :comment, :email, :first_name, :last_name, :phone, :product_id, :order_status_id
+  attr_accessible :comment, :email, :first_name, :last_name
+  attr_accessible :phone, :product_id, :order_status_id, :humanizer_question_id, :humanizer_answer
 
   belongs_to :product
   belongs_to :order_status
@@ -33,5 +34,15 @@ class ProductOrder < ActiveRecord::Base
   def self.mark_as_canceled(ids)
     ProductOrder.update_all({:order_status => OrderStatus.get_canceled}, {:id => ids})
   end
+
+  after_create :send_email
+
+  protected
+  def send_email
+    OrderMailer.order_email(self).deliver
+  end
+
+  include Humanizer
+  require_human_on :create
 
 end

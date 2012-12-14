@@ -7,7 +7,7 @@ class CommentMailer < ActionMailer::Base
     mail(
         :from => @comment.email,
         :to => @contact.email,
-        :subject => I18n.t('site.email_subject', :site => t('site.title'))
+        :subject => I18n.t('site.email_subject_comment', :site => t('site.title'))
     )
   end
 end

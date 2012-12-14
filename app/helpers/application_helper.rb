@@ -40,4 +40,14 @@ module ApplicationHelper
              content_tag(:span, I18n.t('admin.contact.field.skype')) + ": " +
              content_tag(:span, contact.skype)) if !contact.skype.blank?
   end
+
+  def get_field_class(model, field)
+      if model.errors[field].present?
+        return "control-group error"
+      elsif model.errors.any?
+        return "control-group success"
+      else
+        return "control-group"
+     end
+  end
 end
