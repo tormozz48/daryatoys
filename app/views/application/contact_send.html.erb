@@ -1,10 +1,10 @@
 <% if flash[:notice] %>
     <div class="alert alert-success">
       <button type="button" class="close" data-dismiss="alert">×</button>
-      <div>
+      <div class="contact-send-photo">
         <%=image_tag 'photo.png', :class => "img-polaroid"%>
       </div>
-      <div>
+      <div class="contact-send-text">
         <%= flash[:notice] %><%=link_to t('site.button.send_again'), application_contact_path%>
       </div>
     </div>
@@ -14,10 +14,10 @@
 <% if flash[:error] %>
     <div class="alert alert-error">
       <button type="button" class="close" data-dismiss="alert">×</button>
-      <div>
+      <div class="contact-send-photo">
         <%=image_tag 'photo.png', :class => "img-polaroid"%>
       </div>
-      <div>
+      <div class="contact-send-text">
         <%= flash[:error] %>
       </div>
     </div>

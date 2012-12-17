@@ -93,6 +93,15 @@ input.comment-field, textarea.comment-field{
   width: 400px;
 }
 
+.contact-send-photo, .contact-send-text{
+  display: inline-block;
+}
+
+.contact-send-text{
+    width: 500px;
+    vertical-align: top;
+}
+
 .catalog{
   margin: -10px;
   background-color: #977;
