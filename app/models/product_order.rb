@@ -12,6 +12,7 @@ class ProductOrder < ActiveRecord::Base
   validates :phone, :length => {:maximum => 20}
   validates :first_name, :length => {:maximum => 30}
   validates :last_name, :length => {:maximum => 30}
+  validates :comment, :length => {:maximum => 255}
 
   validates :product_id, :order_status_id, :numericality => {:only_integer => true, :greater_than_or_equal_to => 0}
 

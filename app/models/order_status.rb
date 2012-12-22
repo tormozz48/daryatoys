@@ -1,5 +1,5 @@
 class OrderStatus < ActiveRecord::Base
-  attr_accessible :code, :name
+  attr_accessible :code, :name, :product_orders
 
   has_many :product_orders
 
@@ -7,7 +7,7 @@ class OrderStatus < ActiveRecord::Base
 
   validates :code, :numericality => {:only_integer => true, :greater_than_or_equal_to => 0}
   validates :code, :uniqueness => true
-  validates :name, :length => {:maximum => 255}
+  validates :name, :length => {:minimum => 3, :maximum => 255}
 
   NEW = 0
   PAYED = 1

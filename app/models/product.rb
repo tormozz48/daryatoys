@@ -3,7 +3,7 @@ class Product < ActiveRecord::Base
   validates :name, :uniqueness => true
   validates :name, :length => { :minimum => 3, :maximum => 255 }
   validates :enabled, :inclusion => { :in => [true, false] }
-  validates :price, :numericality => { :greater_than_or_equal_to => 0 }
+  validates :price, :numericality => {:only_integer => true, :greater_than_or_equal_to => 0 }
   validates :description, :length => { :minimum => 0, :maximum => 2000 }
 
   belongs_to :category
@@ -13,7 +13,7 @@ class Product < ActiveRecord::Base
 
   attr_accessible :name, :description, :enabled, :price
   attr_accessible :category, :category_id, :product_status, :product_status_id
-  attr_accessible :product_images, :product_images_attributes
+  attr_accessible :product_images, :product_images_attributes, :product_orders
 
   accepts_nested_attributes_for :product_images
 

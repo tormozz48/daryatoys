@@ -24,6 +24,12 @@ gem 'jquery-rails'
 gem 'therubyracer'
 gem 'execjs'
 
+#group :test do
+  gem 'rspec'
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
+  gem 'minitest-reporters'
+#end
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'

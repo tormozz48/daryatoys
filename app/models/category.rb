@@ -14,11 +14,11 @@ class Category < ActiveRecord::Base
   attr_accessible :name, :enabled, :category, :categories, :category_id
 
   def has_enabled_products
-    return self.products._enabled.size > 0
+    self.products._enabled.size > 0
   end
 
   def get_enabled_products
-    return self.products._enabled
+    self.products._enabled
   end
 
   def self.enable_all(ids)

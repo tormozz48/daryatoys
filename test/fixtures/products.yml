@@ -1,13 +1,46 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  name: MyString
-  description: MyText
-  enabled: false
-  price: 1
+product1:
+  name: Product Name 1
+  description: Product Description 1
+  enabled: true
+  price: 100
+  product_status_id: 0
+  category_id: 1
 
-two:
-  name: MyString
-  description: MyText
+product2:
+  name: Product Name 2
+  description: Product description 2
   enabled: false
-  price: 1
+  price: 200
+  product_status_id: 0
+  category_id: 1
+
+
+product3:
+  name: Product Name 3
+  description: Product description 3
+  enabled: true
+  price: 300
+  product_status_id: 1
+  category_id: 1
+
+
+product4:
+  name: Product Name 4
+  description: Product description 4
+  enabled: true
+  price: 400
+  product_status_id: 1
+  category_id: 1
+
+
+
+product5:
+  name: Product Name 5
+  description: Product description 5
+  enabled: false
+  price: 500
+  product_status_id: 1
+  category_id: 1
+

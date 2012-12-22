@@ -1,7 +1,7 @@
 class ProductStatus < ActiveRecord::Base
   validates :code, :name, :presence => true
   validates :code, :uniqueness => true
-  validates :code, :numericality => { :greater_than_or_equal_to => 0 }
+  validates :code, :numericality => {:only_integer => true, :greater_than_or_equal_to => 0 }
   validates :name, :length => { :minimum => 3, :maximum => 255 }
 
   has_many :products

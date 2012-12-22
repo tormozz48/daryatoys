@@ -1,9 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  code: 1
-  name: MyString
+product_status0:
+  code: 0
+  name: "В наличии"
 
-two:
+product_status1:
   code: 1
-  name: MyString
+  name: "Под заказ"

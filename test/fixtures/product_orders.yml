@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+product_order1:
+  email: email1@gmail.com
+  phone: 0-(000)-000-00-00
+  first_name: Ivan
+  last_name: Petrov
+  comment: Test Comment 1
+  product_id: 1
+  order_status_id: 1
+#
+#two:
+#  email: MyString
+#  phone: MyString
+#  first_name: MyString
+#  last_name: MyString
+#  comment: MyText

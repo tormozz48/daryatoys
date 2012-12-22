@@ -1,9 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  name: MyString
-  enabled: false
+category1:
+  id: 1
+  name: Toys
+  enabled: true
 
-two:
-  name: MyString
-  enabled: false
+category2:
+  id: 2
+  name: Closes
+  enabled: true
