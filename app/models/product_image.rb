@@ -4,5 +4,5 @@ class ProductImage < ActiveRecord::Base
 
   validates :image, :product_id, :presence => true
 
-  attr_accessible :image, :product, :product_id
+  attr_accessible :image, :product, :product_id, :image_cache
 end

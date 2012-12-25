@@ -6,7 +6,7 @@
 <% end %>
 <div class="well">
     <div id="myCarousel" class="carousel slide product-detail-gallery">
-      <!-- Carousel items -->
+       <!--Carousel items-->
       <div class="carousel-inner">
         <%@first_item = true%>
         <%@product.product_images.each do |product_image|%>
@@ -16,10 +16,18 @@
             <%@first_item = false%>
         <%end%>
       </div>
-      <!-- Carousel nav -->
+      <!--Carousel nav-->
       <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
       <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
     </div>
+    <!--<div class="product-detail-gallery">-->
+      <%#@product.product_images.each do |product_image|%>
+        <%#=image_tag(product_image.image, :class => "img-rounded img-polaroid product-detail-image")%>
+        <!--<div class="popup-image">-->
+          <%#=image_tag(product_image.image, :class => "img-rounded img-polaroid")%>
+        <!--</div>-->
+      <%#end%>
+    <!--</div>-->
     <div class="product-detail-info">
       <p class="product-detail-title">
         <%= @product.name %>
@@ -61,3 +69,18 @@
     </div>
 </div>
 <%=render 'order'%>
+
+<script type="text/javascript">
+    jQuery(document).ready(function(){
+
+//      jQuery('.product-detail-image').tooltip();
+
+        jQuery('.product-detail-image').popover({
+            animation: true,
+            html: true,
+            placement: 'right',
+            trigger: 'hover',
+            content: 'Hello world'
+        });
+    });
+</script>
