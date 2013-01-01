@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121208210249) do
+ActiveRecord::Schema.define(:version => 20130101010105) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -57,23 +57,20 @@ ActiveRecord::Schema.define(:version => 20121208210249) do
   add_index "categories", ["enabled"], :name => "index_categories_on_enabled"
   add_index "categories", ["name"], :name => "index_categories_on_name"
 
-  create_table "comments", :force => true do |t|
-    t.string   "email",      :null => false
-    t.string   "fio",        :null => false
-    t.string   "title",      :null => false
-    t.text     "body",       :null => false
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  add_index "comments", ["email"], :name => "index_comments_on_email"
-
   create_table "contacts", :force => true do |t|
     t.string   "email",      :null => false
     t.string   "phone1",     :null => false
     t.string   "phone2"
     t.text     "area"
     t.string   "skype"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "news", :force => true do |t|
+    t.date     "date"
+    t.string   "title"
+    t.text     "body"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -126,5 +123,17 @@ ActiveRecord::Schema.define(:version => 20121208210249) do
 
   add_index "products", ["enabled"], :name => "index_products_on_enabled"
   add_index "products", ["name"], :name => "index_products_on_name"
+
+  create_table "responses", :force => true do |t|
+    t.string   "email",       :null => false
+    t.string   "fio",         :null => false
+    t.string   "title",       :null => false
+    t.text     "body",        :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.integer  "products_id"
+  end
+
+  add_index "responses", ["email"], :name => "index_comments_on_email"
 
 end

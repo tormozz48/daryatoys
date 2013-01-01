@@ -1,65 +1,65 @@
-.ubercolortabs{
-  padding: 0;
-  width: 100%;
-  overflow: hidden;
-  background: transparent;
-}
-
-.ubercolortabs ul{
-  font: bold 11px Arial, Verdana, sans-serif;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.ubercolortabs li{
-  display: inline;
-  margin: 0 2px 0 0;
-  padding: 0;
-  border-radius: 7px 7px 0 0;
-  text-transform: uppercase;
-}
-
-
-.ubercolortabs a{
-  float: left;
-  color: white;
-  background: #966;
-  margin: 0 2px 0 0;
-  padding: 0 0 1px 3px;
-  border-radius: 7px 7px 0 0;
-  text-decoration: none;
-  letter-spacing: 1px;
-}
-
-.ubercolortabs a span{
-  float: left;
-  display: block;
-  padding: 7px 9px 3px 6px;
-  cursor: pointer;
-}
-
-.ubercolortabs a span{
-  float: none;
-}
-
-
-.ubercolortabs a:hover, .ubercolortabs li.selected a{
-  background-color: #933; /*background color of tabs onMouseover*/
-  color: white;
-}
-
-.ubercolortabs a:hover span{
-  background-color: transparent;
-}
-
-
-.ubercolordivider{ /*CSS for horizontal line.*/
-  clear: both;
-  padding: 0;
-  width: 100%;
-  height: 5px;
-  line-height: 5px;
-  background: #933; /*background color of horizontal line*/
-  border-top: 1px solid #933; /*Remove this to remove border between bar and tabs*/
-}
+//.ubercolortabs{
+//  padding: 0;
+//  width: 100%;
+//  overflow: hidden;
+//  background: transparent;
+//}
+//
+//.ubercolortabs ul{
+//  font: bold 11px Arial, Verdana, sans-serif;
+//  margin: 0;
+//  padding: 0;
+//  list-style: none;
+//}
+//
+//.ubercolortabs li{
+//  display: inline;
+//  margin: 0 2px 0 0;
+//  padding: 0;
+//  border-radius: 7px 7px 0 0;
+//  text-transform: uppercase;
+//}
+//
+//
+//.ubercolortabs a{
+//  float: left;
+//  color: white;
+//  background: #966;
+//  margin: 0 2px 0 0;
+//  padding: 0 0 1px 3px;
+//  border-radius: 7px 7px 0 0;
+//  text-decoration: none;
+//  letter-spacing: 1px;
+//}
+//
+//.ubercolortabs a span{
+//  float: left;
+//  display: block;
+//  padding: 7px 9px 3px 6px;
+//  cursor: pointer;
+//}
+//
+//.ubercolortabs a span{
+//  float: none;
+//}
+//
+//
+//.ubercolortabs a:hover, .ubercolortabs li.selected a{
+//  background-color: #933; /*background color of tabs onMouseover*/
+//  color: white;
+//}
+//
+//.ubercolortabs a:hover span{
+//  background-color: transparent;
+//}
+//
+//
+//.ubercolordivider{ /*CSS for horizontal line.*/
+//  clear: both;
+//  padding: 0;
+//  width: 100%;
+//  height: 5px;
+//  line-height: 5px;
+//  background: #933; /*background color of horizontal line*/
+//  border-top: 1px solid #933; /*Remove this to remove border between bar and tabs*/
+//}

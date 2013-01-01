@@ -5,7 +5,7 @@ product_order1:
   phone: 0-(000)-000-00-00
   first_name: Ivan
   last_name: Petrov
-  comment: Test Comment 1
+  comment: Test Response 1
   product_id: 1
   order_status_id: 1
 #

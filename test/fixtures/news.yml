@@ -1,0 +1,33 @@
+news1:
+  date: 2012-12-20
+  title: We open!
+  body: Our new site
+news2:
+  date: 2012-12-21
+  title: New Product!
+  body: See new product 1
+news3:
+  date: 2012-12-23
+  title: New Product!
+  body: See new product 2
+news4:
+  date: 2012-12-24
+  title: New Product!
+  body: See new product 3
+news5:
+  date: 2012-12-26
+  title: New Product!
+  body: See new product 4
+news6:
+  date: 2012-12-27
+  title: New Product!
+  body: See new product 5
+news7:
+  date: 2012-12-27
+  title: New Product!
+  body: See new product 6
+news8:
+  date: 2012-12-29
+  title: New Product!
+  body: See new product 7
+

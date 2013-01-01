@@ -1,0 +1,20 @@
+<div class="well sidebar-nav">
+  <ul class="nav nav-list">
+    <li class="nav-header">
+      <%=t('admin.new.title')%>
+    </li>
+    <% @news.each do |n| %>
+        <li class="news-item">
+          <div class="nav-header nav-header-custom news-item-date">
+            <%=n.date%>
+          </div>
+          <div class="nav-header nav-header-custom">
+            <%=n.title%>
+          </div>
+          <div class="news-item-body">
+            <%=n.body%>
+          </div>
+        </li>
+    <% end %>
+  </ul>
+</div><!--/.well -->

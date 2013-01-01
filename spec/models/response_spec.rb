@@ -1,11 +1,11 @@
 require 'spec_helper'
 
-describe Comment do
+describe Response do
 
-  fixtures :comments
+  fixtures :responses
 
   before :each do
-    @comment = comments(:comment1)
+    @response = responses(:response1)
   end
 
   it { should validate_presence_of(:email) }

@@ -1,40 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
+    <head>
+      <meta charset="utf-8">
 
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><%= t('site.title') %></title>
-  <%= csrf_meta_tags %>
+      <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <title><%= t('site.title') %></title>
+      <%= csrf_meta_tags %>
 
-  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
 
-  <%= stylesheet_link_tag "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-</head>
+      <%= stylesheet_link_tag "application", :media => "all" %>
+      <%= javascript_include_tag "application" %>
+    </head>
     <body>
-        <div class="container">
-            <%=render '/menu'%>
-            <div class="banner">
-              <div class="banner-title">
-                <span><%=t('site.title')%></span>
-              </div>
-              <div class="banner-contacts">
-                 <%=get_email(@contact)%>
-                 <%=get_phone1(@contact)%>
-                 <%=get_phone2(@contact)%>
-                 <%=get_area(@contact)%>
-                 <%=get_skype(@contact)%>
+        <div id="wrap">
+            <div class="navbar navbar-inverse navbar-fixed-top navbar-custom">
+              <div class="navbar-inner navbar-custom">
+                <div class="container-fluid">
+                  <%=link_to t('site.title'), main_index_path, :class => "brand"%>
+                </div>
               </div>
             </div>
-            <div class="horizontal-divider"></div>
-            <div class="content-holder content">
-                <%=yield%>
+
+            <div class="container-fluid">
+              <div class="row-fluid">
+                <div class="span3">
+                  <%= render 'common/menu' %>
+                  <%= render 'common/news_feed' %>
+                </div><!--/span-->
+
+                <div class="span6">
+                  <div class="row-fluid">
+                    <div class="span12">
+                      <%=yield%>
+                    </div><!--/span-->
+                  </div><!--/row-->
+                </div><!--/span-->
+
+                <div class="span3">
+                  <%= render 'common/contact' %>
+                </div><!--/span-->
+              </div><!--/row-->
             </div>
-            <div class="footer">
-                <%=t('site.copyright')%>
-            </div>
+        </div>
+        <div class="navbar navbar-fixed-bottom navbar-custom footer">
+          <%=t('site.copyright')%>
         </div>
     </body>
 </html>

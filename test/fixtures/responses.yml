@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+response1:
+  email: mail1@gmail.com
+  fio: Ivan Ivanov
+  title: Hello World Title 1
+  body:  Hello World Body 1
+
+response2:
+  email: mail2@gmail.com
+  fio: Ivan Petrov
+  title: Hello World Title 2
+  body:  Hello World Body 2

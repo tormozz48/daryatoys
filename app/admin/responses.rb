@@ -1,4 +1,4 @@
-ActiveAdmin.register Comment, :as => "UserComment" do
+ActiveAdmin.register Response, :as => "UserComment" do
   menu :priority => 7, :parent=>I18n.t('admin.different'), :label => proc{ I18n.t('admin.comment.title') }
   index :title => I18n.t('admin.comment.title') do
     selectable_column

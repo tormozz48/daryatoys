@@ -13,32 +13,32 @@ module ApplicationHelper
 
   def get_email(contact)
     return content_tag(:div,
-             content_tag(:span, I18n.t('admin.contact.field.email')) + ": " +
-             content_tag(:span, contact.email)) if !contact.email.blank?
+             content_tag(:span, I18n.t('admin.contact.field.email')+": ", :class => "nav-header nav-header-custom") +
+             content_tag(:span, contact.email, :class => "contact-item-value")) if !contact.email.blank?
   end
 
   def get_phone1(contact)
     return content_tag(:div,
-             content_tag(:span, I18n.t('admin.contact.field.phone1')) + ": " +
-             content_tag(:span, contact.phone1)) if !contact.phone1.blank?
+             content_tag(:span, I18n.t('admin.contact.field.phone1')+ ": ", :class => "nav-header nav-header-custom") +
+             content_tag(:span, contact.phone1, :class => "contact-item-value")) if !contact.phone1.blank?
   end
 
   def get_phone2(contact)
     return content_tag(:div,
-             content_tag(:span, I18n.t('admin.contact.field.phone2')) + ": " +
-             content_tag(:span, contact.phone2)) if !contact.phone2.blank?
+             content_tag(:span, I18n.t('admin.contact.field.phone2')+ ": ", :class => "nav-header nav-header-custom") +
+             content_tag(:span, contact.phone2, :class => "contact-item-value")) if !contact.phone2.blank?
   end
 
   def get_area(contact)
     return content_tag(:div,
-             content_tag(:span, I18n.t('admin.contact.field.area')) + ": " +
-             content_tag(:span, contact.area)) if !contact.area.blank?
+             content_tag(:span, I18n.t('admin.contact.field.area')+ ": ", :class => "nav-header nav-header-custom") +
+             content_tag(:span, contact.area, :class => "contact-item-value")) if !contact.area.blank?
   end
 
   def get_skype(contact)
     return content_tag(:div,
-             content_tag(:span, I18n.t('admin.contact.field.skype')) + ": " +
-             content_tag(:span, contact.skype)) if !contact.skype.blank?
+             content_tag(:span, I18n.t('admin.contact.field.skype')+ ": ", :class => "nav-header nav-header-custom") +
+             content_tag(:span, contact.skype, :class => "contact-item-value")) if !contact.skype.blank?
   end
 
   def get_field_class(model, field)

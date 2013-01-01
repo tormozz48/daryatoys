@@ -3,9 +3,12 @@ ru:
     title: "Вязаные игрушки Darya.Toys в Киеве"
     copyright: "Андрей Кузнецов 2012 г.  Сайт разработан на платформе Ruby On Rails"
     menu:
+      title: "Меню"
       item_index: "Главная"
       item_catalog: "Каталог"
-      item_contact: "Контакты"
+      item_delivery: "Доставка"
+      item_payment: "Оплата"
+      item_response: "Обратная связь"
     button:
       send: "Отправить сообщение"
       send_again: "сюда"
@@ -122,6 +125,14 @@ ru:
         comment: "Комментарий"
         product: "Товар"
         order_status: "Статус заказа"
+    new:
+      title: "Новости"
+      fieldset:
+        title: "Параметры новости"
+      field:
+        date: "Дата"
+        title: "Заголовок"
+        body: "Текст"
   active_admin:
     batch_actions:
       labels:
