@@ -1,0 +1,35 @@
+<div class="well product">
+  <legend>
+    <%=product.name%>
+  </legend>
+
+  <div class="control-group">
+      <div class="row-fluid">
+          <%product.product_images.each_with_index do |img, index|%>
+            <div class="span2">
+                <%=cl_image_tag img.image.url(:thumbnail), :class => "img-polaroid"%>
+            </div>
+      <%if (index+1)%6 == 0%>
+        </div><div class="row-fluid">
+      <%end%>
+        <%end%>
+      </div>
+  </div>
+  <div class="control-group">
+    <span class="label">
+      <%=product.description%>
+    </span>
+  </div>
+  <div class="control-group">
+    <span class="label label-info">
+        <%=t('site.product.price')%>: <%=product.price%> <%=t('site.product.currency')%>
+    </span>
+    <span class='<%=get_class_by_product_status(product.product_status)%>'>
+        <%=product.product_status.name%>
+    </span>
+  </div>
+
+  <div class="control-group">
+    <%=link_to t('site.button.order'), new_order_path(:product_id => product.id), :class => "btn btn-primary btn-custom"%>
+  </div>
+</div>

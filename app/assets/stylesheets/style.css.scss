@@ -1,5 +1,4 @@
 body {
-  //height: 100%;
   padding-top: 60px;
   padding-bottom: 40px;
   background: url(image_path('background/background1.jpg')) repeat;
@@ -16,6 +15,10 @@ body {
 
 .nav-header-custom{
   display: inline !important;
+}
+
+.brand-custom{
+  color: #ffffff !important;
 }
 
 .contact-item-value, .news-item-body{
@@ -52,216 +55,25 @@ body {
   font-size: 12px;
 }
 
+.text-field{
+  width: 90%;
+}
 
-//  body{
-//  padding-top: 10px;
-//  padding-bottom: 10px;
-//  background: url(image_path('background/background1.jpg')) repeat;
-//}
-//
-//.container{
-//  width: 800px;
-//  margin: auto;
-//}
-//
-//.banner{
-//  position: relative;
-//  height: 302px;
-//  padding: 10px 10px 0 10px;
-//  background: url(image_path('background/header1.jpeg')) repeat;
-//  border-left: 1px solid #966;
-//  border-right: 1px solid #966;
-//}
-//
-//.banner-title, .banner-contacts{
-//  width: 360px;
-//  padding: 5px 25px 5px 25px;
-//  background-color: #fff;
-//  border: 2px dashed #933;
-//  border-radius: 10px;
-//  box-shadow: 0px 0px 30px #fff;
-//}
-//
-//.banner-title{
-//  width: 380px;
-//}
-//
-//.banner-contacts{
-//  width: auto;
-//  position: absolute;
-//  bottom: 0;
-//  right: 0;
-//  margin: 0 10px 10px 0;
-//  color: #933;
-//}
-//
-//.banner-contacts div span:last-child{
-//  font-weight: bold;
-//}
-//
-//.banner-title span{
-//  color: #933;
-//  font-size: 20px;
-//  font-weight: bold;
-//}
-//
-//.content-holder{
-//  border-left: 1px solid #966;
-//  border-right: 1px solid #966;
-//  border-bottom: 1px solid #966;
-//}
-//
-//.horizontal-divider{
-//  height: 2px;
-//  margin-left: 0px;
-//  margin-right: 0px;
-//  background-color: #966;
-//}
-//
-//.content{
-//  padding: 10px;
-//  background-color: #fff;
-//}
-//
-//.index-page-container{
-//  color: #933;
-//}
-//
-//.index-page-image{
-//  float: right;
-//  margin-left: 10px;
-//}
-//
-//.index-page-container p{
-//  text-align: justify;
-//}
-//
-//.footer{
-//  height: 18px;
-//  padding: 3px 0 3px 10px;
-//  background: #933;
-//  color: #fff;
-//  font-size: 12px;
-//}
-//
-//input.comment-field, textarea.comment-field{
-//  width: 400px;
-//}
-//
-//.contact-send-photo, .contact-send-text{
-//  display: inline-block;
-//}
-//
-//.contact-send-text{
-//    width: 500px;
-//    vertical-align: top;
-//}
-//
-//.catalog{
-//  margin: -10px;
-//  background-color: #977;
-//}
-//
-//.category-title{
-//  height: 25px;
-//  margin-left: 40px;
-//  margin-right: 40px;
-//  padding-top: 2px;
-//  background-color: #933;
-//  border-radius: 5px;
-//  text-align: center;
-//}
-//
-//.category-title span{
-//  font-weight: bold;
-//  color: #fff;
-//}
-//
-//.products-container{
-//  padding-left: 35px;
-//}
-//
-//.product-item{
-//  display: inline-block;
-//  width: 160px;
-//  margin: 5px;
-//  padding: 5px;
-//  background-color: #933;
-//  color: #ffffff;
-//  border: 1px solid #aaa;
-//  border-radius: 5px;
-//  text-align: center;
-//}
-//
-//.product-item:hover{
-//  background-color: #933;
-//}
-//
-//.product-title{
-//  padding-bottom: 3px;
-//}
-//
-//.product-title span{
-//  font-weight: bold;
-//}
-//
-//.product-detail-gallery{
-//  display: inline-block;
-//  width: 300px;
-//}
-//
-//.product-detail-image{
-//  display: inline-block;
-//  width: 130px;
-//  height: 180px;
-//  margin-bottom: 5px;
-//}
-//
-//.popup-image{
-//  display: none;
-//}
-//
-//.product-detail-info{
-//  display: inline-block;
-//  width: 360px;
-//  padding-left: 10px;
-//  padding-right: 10px;
-//  vertical-align: top;
-//  color: #933;
-//}
-//
-//.product-detail-title{
-//  font-size: 18px;
-//  font-weight: bold;
-//}
-//
-//.product-detail-description{
-//  text-align: justify;
-//}
-//
-//.product-detail-price span{
-//  font-weight: bold;
-//}
-//
-//.product-detail-button-continer{
-//  padding-top: 0px;
-//  text-align: center;
-//}
-//
-//.order-send-photo, .order-send-text{
-//  display: inline-block;
-//}
-//
-//.order-send-text{
-//  width: 500px;
-//  vertical-align: top;
-//}
-//
-//.order-send-buttons{
-//  padding: 10px;
-//  text-align: center;
-//}
-//
-//.modal{
-//  width: 700px;
-//}
+.alert-success-custom{
+  overflow: hidden;
+  clear: both;
+}
+
+.patch{
+  //background-image: url(image_path('background/fabric-21.jpg'));
+}
+
+.btn-custom{
+  background-color: #994444;
+  background-image: linear-gradient(to bottom, #996666, #993333);
+}
+
+.btn-custom:hover{
+  background-color: #993333 !important;
+  //background-image: linear-gradient(to bottom, #995555, #991111);
+}

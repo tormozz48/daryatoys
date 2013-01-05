@@ -8,7 +8,15 @@ module ApplicationHelper
   end
 
   def is_contact_selected
-    return @menu_item == ApplicationController::MENU_CONTACT
+    return @menu_item == ApplicationController::MENU_RESPONSE
+  end
+
+  def is_payment_selected
+    return @menu_item == ApplicationController::MENU_PAYMENT
+  end
+
+  def is_delivery_selected
+    return @menu_item == ApplicationController::MENU_DELIVERY
   end
 
   def get_email(contact)

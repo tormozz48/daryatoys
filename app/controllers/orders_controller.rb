@@ -1,7 +1,12 @@
 class OrdersController < ApplicationController
+  before_filter :retrieve_news_feed
+  before_filter :retrieve_contact
 
   def new
-    #TODO implement code here
+    select_active_menu_item(MENU_CATALOG)
+    product = Product.find(params[:product_id])
+    order_status = OrderStatus.get_new
+    @product_order = ProductOrder.new({:product_id => product.id, :order_status_id => order_status.id})
   end
 
   def create

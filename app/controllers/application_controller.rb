@@ -3,8 +3,8 @@ class ApplicationController < ActionController::Base
 
   MENU_INDEX = 0
   MENU_CATALOG = 1
-  MENU_CONTACT = 2
-  MENU_PAY = 3
+  MENU_RESPONSE = 2
+  MENU_PAYMENT = 3
   MENU_DELIVERY = 4
 
   #def index
@@ -91,6 +91,11 @@ class ApplicationController < ActionController::Base
   #  end
   #end
   #
+  protected
+  def select_active_menu_item(item)
+    @menu_item = item
+  end
+
   private
 
   def retrieve_news_feed

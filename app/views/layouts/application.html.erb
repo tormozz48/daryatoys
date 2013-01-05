@@ -20,7 +20,7 @@
             <div class="navbar navbar-inverse navbar-fixed-top navbar-custom">
               <div class="navbar-inner navbar-custom">
                 <div class="container-fluid">
-                  <%=link_to t('site.title'), main_index_path, :class => "brand"%>
+                  <%=link_to t('site.title'), main_index_path, :class => "brand brand-custom"%>
                 </div>
               </div>
             </div>
@@ -28,11 +28,12 @@
             <div class="container-fluid">
               <div class="row-fluid">
                 <div class="span3">
+                  <%= render 'common/contact' %>
                   <%= render 'common/menu' %>
                   <%= render 'common/news_feed' %>
                 </div><!--/span-->
 
-                <div class="span6">
+                <div class="span9">
                   <div class="row-fluid">
                     <div class="span12">
                       <%=yield%>
@@ -40,13 +41,14 @@
                   </div><!--/row-->
                 </div><!--/span-->
 
-                <div class="span3">
-                  <%= render 'common/contact' %>
-                </div><!--/span-->
+                <!--<div class="span3">-->
+                  <!--<%#= render 'common/contact' %>-->
+                <!--</div>&lt;!&ndash;/span&ndash;&gt;-->
               </div><!--/row-->
             </div>
         </div>
         <div class="navbar navbar-fixed-bottom navbar-custom footer">
+          <%=image_tag('rails.png', :width => 15, :height => 25)%>
           <%=t('site.copyright')%>
         </div>
     </body>

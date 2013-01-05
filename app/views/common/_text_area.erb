@@ -3,7 +3,7 @@
     <%=label%>:
   </label>
   <div class="controls">
-    <%=form.text_area field, :id => field, :cols => 40, :rows => 5, :class => "comment-field"%>
+    <%=form.text_area field, :id => field, :cols => 40, :rows => 5, :class => "text-field"%>
     <% if model.errors[field].present? %>
         <% model.errors[field].each do |msg|%>
             <p class="help-block"><%= msg%></p>

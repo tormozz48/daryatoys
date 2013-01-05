@@ -1,0 +1,7 @@
+<% if flash[:notice] %>
+    <div class="alert alert-success alert-success-custom">
+        <h3><%=t('site.response.send.title')%></h3>
+        <%=image_tag 'photo.png', :class => "img-polaroid index-image"%>
+        <%= flash[:notice] %><%=link_to t('site.button.send_again'), new_response_path%>
+    </div>
+<% end %>

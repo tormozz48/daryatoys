@@ -4,7 +4,7 @@
     <%=label%>:
   </label>
   <div class="controls">
-    <%=form.text_field field, :id => field, :class => "comment-field",
+    <%=form.text_field field, :id => field, :class => "text-field",
                        :maxlength => maxlength, :required => "required", :autocomplete => "on"%>
     <% if model.errors[field].present? %>
         <% model.errors[field].each do |msg|%>
