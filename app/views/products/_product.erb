@@ -1,13 +1,27 @@
 <div class="well product">
+  <!--product name-->
   <legend>
     <%=product.name%>
   </legend>
 
+  <!--product images-->
   <div class="control-group">
       <div class="row-fluid">
           <%product.product_images.each_with_index do |img, index|%>
             <div class="span2">
-                <%=cl_image_tag img.image.url(:thumbnail), :class => "img-polaroid"%>
+                <a href="#" data-toggle="modal" data-target="#product_img_"<%=img.id%>>
+                    <%=cl_image_tag img.image.url(:thumbnail), :class => "img-polaroid"%>
+                </a>
+                <div id="product_img_"<%=img.id%>
+                     class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4><%=product.name%></h4>
+                    </div>
+                    <div class="modal-body">
+                      <%=cl_image_tag img.image.url, :class => "img-polaroid"%>
+                    </div>
+                </div>
             </div>
       <%if (index+1)%6 == 0%>
         </div><div class="row-fluid">
@@ -15,11 +29,15 @@
         <%end%>
       </div>
   </div>
+
+  <!--product description-->
   <div class="control-group">
     <span class="label">
       <%=product.description%>
     </span>
   </div>
+
+  <!--price and product status fields-->
   <div class="control-group">
     <span class="label label-info">
         <%=t('site.product.price')%>: <%=product.price%> <%=t('site.product.currency')%>

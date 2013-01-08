@@ -1,10 +1,14 @@
 require 'spec_helper'
 
-describe "Products" do
-  describe "GET /products" do
+describe "Delivery" do
+
+  fixtures :contacts
+  fixtures :news
+
+  describe "GET /delivery" do
     it "works! (now write some real specs)" do
       # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
-      get product_path(:id => 1)
+      get delivery_index_path
       response.status.should be(200)
     end
   end

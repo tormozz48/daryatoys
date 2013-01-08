@@ -1,15 +1,15 @@
 require 'spec_helper'
 
-# Specs in this file have access to a helper object that includes
-# the ProductsHelper. For example:
-#
-# describe ProductsHelper do
-#   describe "string concat" do
-#     it "concats two strings with spaces" do
-#       helper.concat_strings("this","that").should == "this that"
-#     end
-#   end
-# end
 describe ProductsHelper do
-  pending "add some examples to (or delete) #{__FILE__}"
+  fixtures :product_statuses
+
+  it "should return success for exist" do
+    product_status = product_statuses(:product_status0)
+    get_class_by_product_status(product_status).should == "label label-success"
+  end
+
+  it "should return warning for order" do
+    product_status = product_statuses(:product_status1)
+    get_class_by_product_status(product_status).should == "label label-warning"
+  end
 end

@@ -3,6 +3,9 @@
     <%= f.hidden_field :product_id %>
     <%= f.hidden_field :order_status_id %>
 
+    <legend>
+        Оформить заказ на "<%=@product.name%>" на сумму <%=@product.price%> <%=t('site.product.currency')%>
+    </legend>
 
     <!-- field email -->
     <%=render :partial => 'common/email_field',
@@ -48,7 +51,7 @@
                         :model => @product_order}%>
     <div class="control-group">
       <div class="controls">
-        <%=f.submit t('site.button.order_submit'), :class => "btn btn-primary"%>
+        <%=f.submit t('site.button.order_submit'), :class => "btn btn-primary btn-custom"%>
       </div>
     </div>
 <%end%>

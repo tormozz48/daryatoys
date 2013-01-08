@@ -7,7 +7,6 @@ Daryatoys::Application.routes.draw do
   resources :catalog, :only => [:index]
   resources :comments, :only => [:index, :new, :create]
   resources :orders, :only => [:new, :create]
-  resources :products, :only => [:show]
   resources :response, :only => [:new, :create]
   resources :delivery, :only => [:index]
   resources :payment, :only => [:index]

@@ -1,5 +1,5 @@
 require 'spec_helper'
 
-describe CatalogHelper do
+describe DeliveryHelper do
 
 end

@@ -1,10 +1,21 @@
 require 'spec_helper'
 
 describe "Orders" do
-  describe "GET /orders" do
+  fixtures :products
+  fixtures :product_statuses
+  fixtures :product_orders
+
+  describe "GET /orders/new" do
     it "works! (now write some real specs)" do
-      # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
-      get orders_path
+      product = products(:product1)
+      get new_order_path(:product_id => product.id)
+      response.status.should be(200)
+    end
+  end
+
+  describe "POST /orders" do
+    it "works! (now write some real specs)" do
+      post orders_path
       response.status.should be(200)
     end
   end
