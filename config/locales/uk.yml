@@ -1,0 +1,155 @@
+uk:
+  site:
+    title: "Плетені іграшки Darya.Toys у Києві"
+    description: ""
+    keywords: "игрушки, вязаные игрушки,  вязаные игрушки в Киеве, игрушки в Киеве,
+          куклы, куклы в Киеве, купить игрушки,купить  вязаные игрушки,
+          купить вязаные игрушки в Киеве,купить  игрушки в Киеве,
+          купить куклы, купить куклы в Киеве, синтепух, синте, холлофайбер"
+    copyright: "Андрій Кузнєцов 2012 р.  Сайт разработан на платформе Ruby On Rails"
+    menu:
+      title: "Меню"
+      item_index: "Головна"
+      item_catalog: "Каталог"
+      item_delivery: "Доставка"
+      item_payment: "Оплата"
+      item_response: "Зворотній зв’язок"
+    button:
+      send: "Відправити повідомлення"
+      send_again: "сюди"
+      details: "Детальніше"
+      order: "Зробити замовлення"
+      order_submit: "Відправити"
+      goto_catalog: "Повернутися до сторінки каталога"
+    email_subject_comment: "Відгук користовачів сайта %{site}"
+    email_subject_order: "Нове замовлення на сайті %{site}"
+    notification:
+      comment_was_sended: "Ваше повідомлення було успішно відтправлено.
+      Я зв’яжусь з вами при першій можливості. Якщо ви хочете написати ще що-небудь, то натисніть "
+      order_error: "Сталася помилка при відправленні вашого замовлення. Можливо, деякі з введених вами даних були некоректними.
+      Будь ласка,  натисніть кнопку «Зробити замовлення», щоб виправити введені вами дані "
+      order_was_created:
+        title: "Дякую Вам!"
+        part1: "Ваше замовлення на іграшку"
+        part2: "вартістю"
+        part3: "було успішно збережено"
+        part4: "Я зв’яжусь з вами при першій можливості, використовуючи"
+    product:
+      price: "Ціна"
+      currency: "грн."
+      status: "Наявність"
+    order:
+      legend: "Оформити замовлення на іграшку "
+      field:
+        email: "E-Mail"
+        phone: "Телефон"
+        first_name: "Ім’я"
+        last_name: "Прізвище"
+        comment: "Коментар"
+    order_email_notification:
+      part1: "Шановний адміністраторе сайту"
+      part2: "Надійшло нове замовлення від користувача"
+      part3: "На продукт"
+      part4: "на суму"
+      part5: "Додаткова інформація від користувача"
+      part6: "замовника"
+    response:
+      send:
+        title: "Відгук було успішно відправлено"
+  admin:
+    title: "ІгрAшки від  Дашки"
+    dashboard:
+      title: "Зведена інформація"
+      category_count: "Кол-во категорий товара"
+      category_count_enabled: "Кіл-ть опублікованих категорій товару"
+      product_count: "Кіл-ть товарів"
+      product_count_enabled: "Кіл-ть опублікованих товарів"
+    admin_user:
+      title: "Адміністратори"
+      fieldset:
+        title: "Адміністратори"
+      email: "E-Mail"
+      current_sign_in: "Зайшов у"
+      last_sign_in: "Останнє відвідування"
+      sign_in_count: "Число входів в систему"
+      password: "Пароль"
+      password_confirmation: "Підтвердження пароля"
+    category:
+      title: "Категорії товарів"
+      fieldset:
+        title: "Параметри категорії"
+      field:
+        category: "Батьківська категорія"
+        name: "Назва категорії"
+        description: "Опис категорії"
+        enabled: "Опубліковано"
+    product:
+      title: "Товари"
+      fieldset:
+        title: "Параметри товарів"
+      field:
+        category: "Категорія товару"
+        name: "Назва"
+        enabled: "Опубліковано"
+        description: "Опис"
+        price: "Ціна"
+        status: "Статус товару"
+    product_image:
+      title: "Зображення товару"
+      fieldset:
+        title: "Параметри зображення товару"
+      field:
+        product: "Товар"
+        image: "Зображення"
+    contact:
+      title: "Контакти"
+      fieldset:
+        title: "Параметри контакта"
+      field:
+        email: "E-Mail"
+        phone1: "Телефон"
+        phone2: "Телефон"
+        area: "Адрес"
+        skype: "Skype"
+    comment:
+      title: "Відгуки"
+      fieldset:
+        title: "Параметри відкликання"
+        legend: "Зворотний зв'язок"
+        captha_hint: "доведи, що ти людина"
+      field:
+        email: "E-Mail"
+        fio: "П.I.Б."
+        title: "Тема"
+        body: "Текст"
+    different: "Разное"
+    order:
+      title: "Замовлення"
+      fieldset:
+        title: "Параметри замовлення"
+      field:
+        email: "E-Mail"
+        phone: "Телефон"
+        first_name: "Им'я"
+        last_name: "Прізвище"
+        comment: "Комментар"
+        product: "Товар"
+        order_status: "Статус замовлення"
+    new:
+      title: "Новини"
+      fieldset:
+        title: "Параметри новини"
+      field:
+        date: "Дата"
+        title: "Заголовок"
+        body: "Текст"
+  active_admin:
+    batch_actions:
+      labels:
+        mark_as_enabled: "Опубликовать"
+        mark_as_disabled: "Убрать с публикации"
+        mark_as_new: "Отметить как новые"
+        mark_as_payed: "Отметить как оплаченные"
+        mark_as_sent: "Отметить как отправленные"
+        mark_as_completed: "Отметить как доставленные"
+        mark_as_canceled: "Отменить"

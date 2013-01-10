@@ -23,6 +23,7 @@ gem 'twitter-bootstrap-rails'
 gem 'jquery-rails'
 gem 'therubyracer'
 gem 'execjs'
+gem 'rails-i18n'
 
 #group :test do
   gem 'rspec'
@@ -30,18 +31,3 @@ gem 'execjs'
   gem 'shoulda-matchers'
   gem 'minitest-reporters'
 #end
-
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the web server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-#gem 'ruby-debug19', :require => 'ruby-debug'
-#gem 'ruby-debug-base19x'
-#gem 'ruby-debug-ide'
-

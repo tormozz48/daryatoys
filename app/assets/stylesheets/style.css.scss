@@ -27,7 +27,9 @@ body {
 
 .contact-item-value, .news-item-body{
   color: #933 !important;
-  text-decoration: none;
+  font-family: "Helvetica";
+  //font-weight: bold;
+  //text-decoration: none;
 }
 
 .news-item{
@@ -79,7 +81,11 @@ body {
 
 .btn-custom:hover{
   background-color: #993333 !important;
-  //background-image: linear-gradient(to bottom, #995555, #991111);
+  background-image: linear-gradient(to bottom, #995555, #991111);
+}
+
+.label-custom{
+  white-space: normal;
 }
 
 .modal{

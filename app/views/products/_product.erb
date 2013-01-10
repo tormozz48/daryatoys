@@ -9,10 +9,10 @@
       <div class="row-fluid">
           <%product.product_images.each_with_index do |img, index|%>
             <div class="span2">
-                <a href="#" data-toggle="modal" data-target="#product_img_"<%=img.id%>>
+                <a href="#" data-toggle="modal" data-target="#product_img_<%=img.id%>">
                     <%=cl_image_tag img.image.url(:thumbnail), :class => "img-polaroid"%>
                 </a>
-                <div id="product_img_"<%=img.id%>
+                <div id="product_img_<%=img.id%>"
                      class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
@@ -32,9 +32,9 @@
 
   <!--product description-->
   <div class="control-group">
-    <span class="label">
+    <div class="label label-custom">
       <%=product.description%>
-    </span>
+    </div>
   </div>
 
   <!--price and product status fields-->
