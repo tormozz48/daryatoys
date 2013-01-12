@@ -53,13 +53,26 @@ body {
   font-size: 12px !important;
 }
 
+h3, h4{
+  color: #444444;
+}
+
+.index-page-content{
+  background-image: url(image_path('background/baby2.gif'));
+  border: 2px dashed #993333;
+}
+
 .index-page-content p{
   text-align: justify;
+  color: #444 !important;
 }
 
 .index-image{
   float: left;
   margin-right: 10px;
+  moz-box-shadow: 4px 4px 10px #933;
+  webkit-box-shadow: 4px 4px 10px #933;
+  box-shadow: 4px 4px 10px #933;
 }
 
 .footer{
@@ -79,7 +92,8 @@ body {
 }
 
 .patch{
-  //background-image: url(image_path('background/fabric-21.jpg'));
+  background-image: url(image_path('background/baby2.gif'));
+  border: 2px dashed #993333 !important;
 }
 
 .btn-custom{
