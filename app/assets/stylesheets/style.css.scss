@@ -75,6 +75,11 @@ h3, h4{
   box-shadow: 4px 4px 10px #933;
 }
 
+.product{
+  //background-image: url(image_path('background/pattern_148.gif'));
+  background-image: url(image_path('background/ser37.gif'));
+}
+
 .footer{
   height: 18px;
   padding: 3px 0 3px 10px;
@@ -92,6 +97,7 @@ h3, h4{
 }
 
 .patch{
+  /*display: none;*/
   background-image: url(image_path('background/baby2.gif'));
   border: 2px dashed #993333 !important;
 }
@@ -129,4 +135,12 @@ h3, h4{
 .modal-body{
   height: 550px !important;
   max-height: 550px !important;
+}
+
+.rus-icon{
+  background-image: url(image_path('russian.gif'));
+}
+
+.ukr-icon{
+  background-image: url(image_path('ukrainian.gif'));
 }

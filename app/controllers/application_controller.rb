@@ -17,6 +17,10 @@ class ApplicationController < ActionController::Base
     { :locale => I18n.locale }
   end
 
+  def change_locale
+    redirect_to root_path
+  end  
+
   def render_404
     respond_to do |format|
       format.html { render :file => "#{Rails.root}/public/404.html",

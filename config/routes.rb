@@ -12,7 +12,7 @@ Daryatoys::Application.routes.draw do
     resources :delivery, :only => [:index]
     resources :payment, :only => [:index]
   end
-
+  
   match '/:locale' => 'main#index'
 
   root :to => 'main#index'

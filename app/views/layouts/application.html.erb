@@ -22,6 +22,10 @@
               <div class="navbar-inner navbar-custom">
                 <div class="container-fluid">
                   <%=link_to t('site.title'), main_index_path, :class => "brand brand-custom"%>
+                  <p class="navbar-text pull-right">
+                    <%=link_to image_tag('russian.gif'), '/ru/main'%>
+                    <%=link_to image_tag('ukrainian.gif'), '/uk/main'%>
+                  </p>  
                 </div>
               </div>
             </div>
