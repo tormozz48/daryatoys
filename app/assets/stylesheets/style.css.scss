@@ -12,7 +12,15 @@ body {
 }
 
 .navbar-custom{
-  background-image: linear-gradient(to bottom, #996666, #993333) !important;
+  background: #996666; /* Для старых браузров */
+  background: -moz-linear-gradient(top, #996666, #993333) !important; /* Firefox 3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, 
+              color-stop(0%,#996666), color-stop(100%,#993333)) !important; /* Chrome 1-9, Safari 4-5 */
+  background: -webkit-linear-gradient(top, #996666, #993333) !important; /* Chrome 10+, Safari 5.1+ */
+  background: -o-linear-gradient(top, #996666, #993333) !important; /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #996666, #993333) !important; /* IE10 */
+  background: linear-gradient(top, #996666, #993333) !important; /* CSS3 */
+  /*background-image: linear-gradient(to bottom, #996666, #993333) !important;*/
   color: #ffffff !important;
   border-color: #993333 !important;
 }
@@ -76,7 +84,15 @@ body {
 
 .btn-custom{
   background-color: #994444;
-  background-image: linear-gradient(to bottom, #996666, #993333);
+  //background-image: linear-gradient(to bottom, #996666, #993333);
+  background: #996666 !important; /* Для старых браузров */
+  background: -moz-linear-gradient(top, #996666, #993333) !important; /* Firefox 3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, 
+              color-stop(0%,#996666), color-stop(100%,#993333)) !important; /* Chrome 1-9, Safari 4-5 */
+  background: -webkit-linear-gradient(top, #996666, #993333) !important; /* Chrome 10+, Safari 5.1+ */
+  background: -o-linear-gradient(top, #996666, #993333) !important; /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #996666, #993333) !important; /* IE10 */
+  background: linear-gradient(top, #996666, #993333) !important; /* CSS3 */
 }
 
 .btn-custom:hover{
