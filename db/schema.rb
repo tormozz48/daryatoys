@@ -57,16 +57,6 @@ ActiveRecord::Schema.define(:version => 20130101010105) do
   add_index "categories", ["enabled"], :name => "index_categories_on_enabled"
   add_index "categories", ["name"], :name => "index_categories_on_name"
 
-  create_table "contacts", :force => true do |t|
-    t.string   "email",      :null => false
-    t.string   "phone1",     :null => false
-    t.string   "phone2"
-    t.text     "area"
-    t.string   "skype"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "news", :force => true do |t|
     t.date     "date"
     t.string   "title"
@@ -123,6 +113,16 @@ ActiveRecord::Schema.define(:version => 20130101010105) do
 
   add_index "products", ["enabled"], :name => "index_products_on_enabled"
   add_index "products", ["name"], :name => "index_products_on_name"
+
+  create_table "response", :force => true do |t|
+    t.string   "email",      :null => false
+    t.string   "phone1",     :null => false
+    t.string   "phone2"
+    t.text     "area"
+    t.string   "skype"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "responses", :force => true do |t|
     t.string   "email",       :null => false

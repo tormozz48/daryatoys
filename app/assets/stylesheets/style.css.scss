@@ -12,7 +12,15 @@ body {
 }
 
 .navbar-custom{
-  background-image: linear-gradient(to bottom, #996666, #993333) !important;
+  background: #996666; /* Для старых браузров */
+  background: -moz-linear-gradient(top, #996666, #993333) !important; /* Firefox 3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, 
+              color-stop(0%,#996666), color-stop(100%,#993333)) !important; /* Chrome 1-9, Safari 4-5 */
+  background: -webkit-linear-gradient(top, #996666, #993333) !important; /* Chrome 10+, Safari 5.1+ */
+  background: -o-linear-gradient(top, #996666, #993333) !important; /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #996666, #993333) !important; /* IE10 */
+  background: linear-gradient(top, #996666, #993333) !important; /* CSS3 */
+  /*background-image: linear-gradient(to bottom, #996666, #993333) !important;*/
   color: #ffffff !important;
   border-color: #993333 !important;
 }
@@ -45,13 +53,31 @@ body {
   font-size: 12px !important;
 }
 
+h3, h4{
+  color: #444444;
+}
+
+.index-page-content{
+  background-image: url(image_path('background/baby2.gif'));
+  border: 2px dashed #993333;
+}
+
 .index-page-content p{
   text-align: justify;
+  color: #444 !important;
 }
 
 .index-image{
   float: left;
   margin-right: 10px;
+  moz-box-shadow: 4px 4px 10px #933;
+  webkit-box-shadow: 4px 4px 10px #933;
+  box-shadow: 4px 4px 10px #933;
+}
+
+.product{
+  //background-image: url(image_path('background/pattern_148.gif'));
+  background-image: url(image_path('background/ser37.gif'));
 }
 
 .footer{
@@ -71,12 +97,22 @@ body {
 }
 
 .patch{
-  //background-image: url(image_path('background/fabric-21.jpg'));
+  /*display: none;*/
+  background-image: url(image_path('background/baby2.gif'));
+  border: 2px dashed #993333 !important;
 }
 
 .btn-custom{
   background-color: #994444;
-  background-image: linear-gradient(to bottom, #996666, #993333);
+  //background-image: linear-gradient(to bottom, #996666, #993333);
+  background: #996666 !important; /* Для старых браузров */
+  background: -moz-linear-gradient(top, #996666, #993333) !important; /* Firefox 3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, 
+              color-stop(0%,#996666), color-stop(100%,#993333)) !important; /* Chrome 1-9, Safari 4-5 */
+  background: -webkit-linear-gradient(top, #996666, #993333) !important; /* Chrome 10+, Safari 5.1+ */
+  background: -o-linear-gradient(top, #996666, #993333) !important; /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #996666, #993333) !important; /* IE10 */
+  background: linear-gradient(top, #996666, #993333) !important; /* CSS3 */
 }
 
 .btn-custom:hover{
@@ -99,4 +135,12 @@ body {
 .modal-body{
   height: 550px !important;
   max-height: 550px !important;
+}
+
+.rus-icon{
+  background-image: url(image_path('russian.gif'));
+}
+
+.ukr-icon{
+  background-image: url(image_path('ukrainian.gif'));
 }
