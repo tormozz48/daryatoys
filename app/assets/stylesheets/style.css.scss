@@ -124,8 +124,40 @@ h3, h4{
   white-space: normal;
 }
 
+/*language switch links*/
+.rus-icon{
+  background-image: url(image_path('russian.gif'));
+}
+
+.ukr-icon{
+  background-image: url(image_path('ukrainian.gif'));
+}
+
+/*letf side menu item style*/
+.nav > li > a{
+  color: #994444;
+  font-weight: bold;
+  text-shadow: none;
+}
+
+.nav > li > a:hover, .nav > li.active > a:hover{
+  background-color: #996666;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.nav > li.active > a{
+  background-color: #993333;
+} 
+
+a, a:hover{
+  color: #993333;
+}
+
+/*modal window*/
 .modal{
   width: 400px !important;
+  top: 5% !important;
 }
 
 .modal.fade.in{
@@ -137,10 +169,3 @@ h3, h4{
   max-height: 550px !important;
 }
 
-.rus-icon{
-  background-image: url(image_path('russian.gif'));
-}
-
-.ukr-icon{
-  background-image: url(image_path('ukrainian.gif'));
-}
