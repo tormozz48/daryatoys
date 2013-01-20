@@ -11,6 +11,7 @@ gem 'fog'
 gem 'formtastic'
 gem 'humanizer'
 gem 'cloudinary'
+gem 'globalize3'
 
 
 group :assets do

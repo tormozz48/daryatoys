@@ -1,4 +1,6 @@
 class Product < ActiveRecord::Base
+  translates :name, :description
+
   validates :name, :description, :price, :enabled, :category_id, :product_status_id, :presence => true
   validates :name, :uniqueness => true
   validates :name, :length => { :minimum => 3, :maximum => 255 }

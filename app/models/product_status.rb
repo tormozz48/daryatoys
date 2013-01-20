@@ -1,4 +1,6 @@
 class ProductStatus < ActiveRecord::Base
+  translates :name
+
   validates :code, :name, :presence => true
   validates :code, :uniqueness => true
   validates :code, :numericality => {:only_integer => true, :greater_than_or_equal_to => 0 }

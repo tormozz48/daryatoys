@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130101010105) do
+ActiveRecord::Schema.define(:version => 20130120164924) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -57,6 +57,37 @@ ActiveRecord::Schema.define(:version => 20130101010105) do
   add_index "categories", ["enabled"], :name => "index_categories_on_enabled"
   add_index "categories", ["name"], :name => "index_categories_on_name"
 
+  create_table "category_translations", :force => true do |t|
+    t.integer  "category_id"
+    t.string   "locale"
+    t.string   "name"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "category_translations", ["category_id"], :name => "index_category_translations_on_category_id"
+  add_index "category_translations", ["locale"], :name => "index_category_translations_on_locale"
+
+  create_table "comments", :id => false, :force => true do |t|
+    t.integer  "id",         :null => false
+    t.string   "email",      :null => false
+    t.string   "fio",        :null => false
+    t.string   "title",      :null => false
+    t.text     "body",       :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "contacts", :force => true do |t|
+    t.string   "email",      :null => false
+    t.string   "phone1",     :null => false
+    t.string   "phone2"
+    t.text     "area"
+    t.string   "skype"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "news", :force => true do |t|
     t.date     "date"
     t.string   "title"
@@ -64,6 +95,18 @@ ActiveRecord::Schema.define(:version => 20130101010105) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  create_table "news_translations", :force => true do |t|
+    t.integer  "news_id"
+    t.string   "locale"
+    t.string   "title"
+    t.string   "body"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "news_translations", ["locale"], :name => "index_news_translations_on_locale"
+  add_index "news_translations", ["news_id"], :name => "index_news_translations_on_news_id"
 
   create_table "order_statuses", :force => true do |t|
     t.integer  "code"
@@ -91,6 +134,17 @@ ActiveRecord::Schema.define(:version => 20130101010105) do
     t.datetime "updated_at",      :null => false
   end
 
+  create_table "product_status_translations", :force => true do |t|
+    t.integer  "product_status_id"
+    t.string   "locale"
+    t.string   "name"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+  end
+
+  add_index "product_status_translations", ["locale"], :name => "index_product_status_translations_on_locale"
+  add_index "product_status_translations", ["product_status_id"], :name => "index_product_status_translations_on_product_status_id"
+
   create_table "product_statuses", :force => true do |t|
     t.integer  "code",       :null => false
     t.string   "name",       :null => false
@@ -99,6 +153,18 @@ ActiveRecord::Schema.define(:version => 20130101010105) do
   end
 
   add_index "product_statuses", ["code"], :name => "index_product_statuses_on_code"
+
+  create_table "product_translations", :force => true do |t|
+    t.integer  "product_id"
+    t.string   "locale"
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "product_translations", ["locale"], :name => "index_product_translations_on_locale"
+  add_index "product_translations", ["product_id"], :name => "index_product_translations_on_product_id"
 
   create_table "products", :force => true do |t|
     t.string   "name",                                :null => false

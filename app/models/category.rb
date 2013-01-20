@@ -1,4 +1,6 @@
 class Category < ActiveRecord::Base
+  translates :name
+
   validates :name, :enabled, :presence => true
   validates :name, :uniqueness => true
   validates :name, :length => {:minimum => 3, :maximum => 255}
