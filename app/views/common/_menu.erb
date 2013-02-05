@@ -10,10 +10,7 @@
       <%=link_to t('site.menu.item_catalog'), catalog_index_path %>
     </li>
     <li <% if is_delivery_selected %> class="active" <% end %>>
-      <%=link_to t('site.menu.item_delivery'), delivery_index_path %>
-    </li>
-    <li <% if is_payment_selected %> class="active" <% end %>>
-      <%=link_to t('site.menu.item_payment'), payment_index_path %>
+      <%=link_to t('site.menu.item_del_pay'), delivery_index_path %>
     </li>
     <li <% if is_contact_selected %> class="active" <% end %>>
       <%=link_to t('site.menu.item_response'), new_response_path %>

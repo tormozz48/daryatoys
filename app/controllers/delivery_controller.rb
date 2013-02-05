@@ -4,5 +4,6 @@ class DeliveryController < ApplicationController
 
   def index
     select_active_menu_item(MENU_DELIVERY)
+    @contact = Contact.get_contact
   end
 end

@@ -11,8 +11,7 @@ ru:
       title: "Меню"
       item_index: "Главная"
       item_catalog: "Каталог"
-      item_delivery: "Доставка"
-      item_payment: "Оплата"
+      item_del_pay: "Доставка и Оплата"
       item_response: "Обратная связь"
     button:
       send: "Отправить сообщение"

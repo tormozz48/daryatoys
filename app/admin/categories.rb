@@ -25,6 +25,7 @@ ActiveAdmin.register Category do
     f.inputs I18n.t('admin.category.fieldset.title') do
       f.input :category, :label => I18n.t('admin.category.field.category')
       f.input :name, :label => I18n.t('admin.category.field.name')
+      f.input :description, :label => I18n.t('admin.category.field.description')
       f.input :enabled, :label =>  I18n.t('admin.category.field.enabled')
     end
     f.buttons

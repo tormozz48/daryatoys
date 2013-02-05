@@ -1,3 +1,62 @@
 <div class="well index-page-content">
-    <p>Страница находится в стадии разработки</p>
+  <h3><%=t('delivery_and_payment.title')%></h3>
+
+  <h4><%=t('delivery_and_payment.delivery.title')%></h4>
+
+  <div>
+    <span>
+      <%=t('delivery_and_payment.delivery.span1')%>
+    </span>
+    <ul>
+      <li><%=t('delivery_and_payment.delivery.li1')%></li>
+      <li><%=t('delivery_and_payment.delivery.li2')%></li>
+    </ul>
+    <span>
+      <%=t('delivery_and_payment.delivery.span2')%>
+    </span>
+  </div>
+
+  <p>
+    <%=t('delivery_and_payment.delivery.p11')%>
+    <strong>
+      <%=link_to(t('delivery_and_payment.nova_posta'), "http://novaposhta.ua")%>
+    </strong>
+    <%=t('delivery_and_payment.delivery.p12')%>
+  </p>
+  <p><%=t('delivery_and_payment.delivery.p2')%></p>
+
+  <h4><%=t('delivery_and_payment.payment.title')%></h4>
+
+  <ul>
+    <li>
+      <%=t('delivery_and_payment.payment.li1')%>
+      <strong>
+        <%= @contact.email%>
+      </strong>
+    </li>
+    <li>
+      <%=t('delivery_and_payment.payment.li21')%>
+      <strong>
+        <%= @contact.phone1%>
+      </strong>
+      <%=t('delivery_and_payment.payment.li22')%>
+    </li>
+  </ul>
+
+  <div>
+    <span>
+      <%=t('delivery_and_payment.payment.span1')%>
+    </span>
+    <ul>
+      <li><%=t('delivery_and_payment.payment.li3')%></li>
+      <li><%=t('delivery_and_payment.payment.li4')%></li>
+      <li>
+        <%=t('delivery_and_payment.payment.li51')%>
+        <strong>
+            <%=link_to(t('delivery_and_payment.nova_posta'), "http://novaposhta.ua")%>
+        </strong>
+        <%=t('delivery_and_payment.payment.li52')%>
+      </li>
+    </ul>
+  </div>
 </div>

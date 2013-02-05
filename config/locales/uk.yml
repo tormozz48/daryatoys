@@ -11,8 +11,7 @@ uk:
       title: "Меню"
       item_index: "Головна"
       item_catalog: "Каталог"
-      item_delivery: "Доставка"
-      item_payment: "Оплата"
+      item_del_pay: "Доставка i Оплата"
       item_response: "Зворотній зв’язок"
     button:
       send: "Відправити повідомлення"
